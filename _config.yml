@@ -26,7 +26,6 @@ BASE_PATH : /scrambledev
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
 
