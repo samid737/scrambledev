@@ -1,11 +1,11 @@
 ---
 title: About
 layout: page
-tagline: A few more words about this theme
+tagline: coming soon.
 permalink: "/about.html"
 ---
 
-Scramble JS.
+stay tuned!
 
 
 [Go to the Home Page]({{ site.url }}{{ site.baseurl }})

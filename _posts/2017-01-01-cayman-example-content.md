@@ -1,6 +1,6 @@
 ---
+title: Example content
 layout: post
-title: "Example content"
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
