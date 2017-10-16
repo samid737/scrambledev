@@ -1,2 +1,0 @@
-# scrambledev
-Scramble development blog
