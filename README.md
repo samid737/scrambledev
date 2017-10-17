@@ -1,2 +1,2 @@
 # scrambledev
-Scramble development blog
+Scramble development log
