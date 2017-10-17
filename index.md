@@ -1,5 +1,5 @@
 ---
 title: Scramble JS
 layout: home
-tagline: Here I post all of my progress
+tagline: Here I post the entire progess of Scramble JS.
 ---
