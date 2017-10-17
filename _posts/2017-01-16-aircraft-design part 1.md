@@ -7,4 +7,4 @@ The [MIG-21 FISHBED](https://en.wikipedia.org/wiki/Mikoyan-Gurevich_MiG-21) will
 
 ![Desert]({{ site.url }}/scrambledev/assets/images/PlayerDesert.png)
 
-You can notice the gaps near the belly, which is where the airbrakes are positioned once the spritesheet is ready.
+You can notice the gaps near the belly, which is where the airbrakes are positioned once the spritesheet complete and ready for use within Phaser.
