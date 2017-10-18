@@ -1,21 +1,18 @@
 
-
-
 # TODO:
 
-- Speedbrake stuck after crash
-- positive feedback mach speed
+- Auto pilot gain tuning.
+- supersonic drag
 
+- Stall behaviour, vstall.
+
+- Speedbrake stuck after crash
 - Correct fuel burn
 - Thrust model.
 - Mach 2 check.
-- fligh dynamics supersonic
 - SI altitude
 - IAS,TAS,EAS
 
-- Control damping, improve flight model.
-- Stall behaviour, vstall.
-- Auto pilot.
 
 - Moving scenery (relative positioning/reference frame).
 - World building.
@@ -26,6 +23,30 @@
 
 - performance optimization
 - refactor constants
+
+# 18-10-2017
+
+## Features:
+
+- Control damping, improve flight model.
+
+- Autothrottle
+
+## Bug fixes:
+
+- positive feedback mach speed
+
+
+# 17-10-2017
+
+## Features:
+
+- Autothrottle system.
+- Autpilot alt_hold
+
+## Bug fixes:
+
+- plus minus signs altitude
 
 # 11-10-2017
 
