@@ -3,11 +3,9 @@ Scramble development log. for more details please visit the [dev log](https://sa
 
 Changelog:
 
-
-
 # TODO:
 
-- Auto pilot.
+- Auto pilot gain tuning.
 - supersonic drag
 
 - Stall behaviour, vstall.
