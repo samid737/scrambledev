@@ -1,5 +1,5 @@
 ---
-title: 'Aircraft design part 1: MIG-21'
+title: 'Design part 1: MIG-21'
 layout: post
 ---
 
