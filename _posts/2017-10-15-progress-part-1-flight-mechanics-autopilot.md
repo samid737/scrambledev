@@ -3,7 +3,7 @@ title: 'Development part X: Head up display, Secondary flight controls'
 layout: post
 ---
 
-Last week I worked on two features that are extremely valuable to the user:
+Last week I worked on two features that are crucial during flight:
 
 ##  Head up display (HUD).
 
@@ -25,7 +25,6 @@ Flight info included:
 * Airframe stress/damage
 * Fuel indicator
 * Weapon indicators (yet to decide)
-
 
 ##  Secondary flight controls.
 
