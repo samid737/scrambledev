@@ -7,7 +7,7 @@ Last week I worked on two features that are extremely valuable to the user:
 
 ##  Head up display (HUD).
 
-![display]({{ site.url }}/scrambledev/blob/gh-pages/assets/images/screenshots/HUD1.png)
+![display]({{ site.url }}/scrambledev/assets/images/HUD1.png)
 
 The HUD is pretty similar to the one used in [Aero Elite Combat academy](https://i.ytimg.com/vi/bBFGRPCQngE/maxresdefault.jpg), A minimalistic HUD. It provides all the essential flight information for combat aircraft flight, leaving out all the flight systems that can [fill](https://i.ytimg.com/vi/1UrF6bmwe_E/maxresdefault.jpg) up the entire display field. The sim is in 2D in longitudinal direction, therefore heading display is removed and the pitch ladder is locked to pitch motion.
 
@@ -53,7 +53,7 @@ if(flapSetting ==2){
 
 ### Airbrakes
 
-![]({{ site.url }}/scrambledev/blob/gh-pages/assets/images/screenshots/AIRBRAKE.png)
+![]({{ site.url }}/scrambledev/assets/images/AIRBRAKE.png)
 
 [Airbrakes](http://c8.alamy.com/comp/D4RX54/a-serbian-air-force-mig-21um-jet-fighter-with-air-brakes-in-flight-D4RX54.jpg) are necessary to slow down the aircraft and are also iplemented. They basically increase overall drag. Similar to how the flaps increase the CL value, deploying airbrakes will add some predefined constant to the drag coefficient of the aircraft.
 
