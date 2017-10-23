@@ -31,7 +31,7 @@ Arcade Physics collision detection is therefore sufficient. The more advanced [P
 
 Scramble JS will be in 2D side view , hence the world is 2D, similar to UN Squadron for the SNES **(CLICK IMAGE FOR VIDEO)**:
 
-[![CLICK FOR VIDEO](/scrambledev/assets/images/UN.png)](https://www.youtube.com/watch?v=-C6V_bEmOEQ&t=608s)
+[![CLICK FOR VIDEO]({{ site.url }}/scrambledev/assets/images/UN.png)](https://www.youtube.com/watch?v=-C6V_bEmOEQ&t=608s)
 
 The frame of refence is pretty tricky to implement. In UN Squadron, the player can move around, but is bounded by the viewport and all objects are moving towards the player. This works fine for arcade/action gameplay, but for a simulated flight, it will make less sense. The game world is simulated using real world dimensions (SI units) and the level of action is not like in UN Squadron. 
 
