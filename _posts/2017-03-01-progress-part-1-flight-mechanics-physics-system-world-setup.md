@@ -45,7 +45,7 @@ The Aircraft object continously changes and A full list is of properties is not 
 
 #### Methods
 
-- Control & input
+-  Input & control
   - landing gear retraction, extension
   - flight control input
   - autopilot controller
