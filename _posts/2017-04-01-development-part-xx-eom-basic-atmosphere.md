@@ -1,5 +1,5 @@
 ---
-title: 'Development part 2: modeling EOM'
+title: 'Development part 2: Modeling EOM'
 layout: post
 ---
 

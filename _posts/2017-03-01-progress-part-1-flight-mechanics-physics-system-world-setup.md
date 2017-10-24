@@ -5,6 +5,8 @@ layout: post
 
 *Please not that these features where implemented in the early stage, prior to  logging the progress.  Not all details are included.*
 
+The first objective is to model the aircraft so that it can exist inside the game engine. This way there will be at least one object to play around with. Then the phyiscs system must be considered . The simulated world must be propertly configured for the simulation to work.
+
 ## Modeling aircraft
 
 ### Sprite building
@@ -18,7 +20,6 @@ Scramble JS uses an object oriented approach to model the aircraft. It is treate
 ### Properties and methods considered
 
 The Aircraft object continously changes and so the class object code  is not provided. Conceptually, the following is considered in defining the aircraft:
-
 
 #### Properties
 
@@ -81,7 +82,7 @@ Arcade Physics collision detection is therefore sufficient. The more advanced [P
 
 ## World setup
 
-Scramble JS will be in 2D side view , hence the world is 2D, similar to UN Squadron for the SNES **(CLICK IMAGE FOR VIDEO)**:
+Scramble JS will be viewed from the side view and the world is 2D, similar to UN Squadron for the SNES **(CLICK IMAGE FOR VIDEO)**:
 
 [![CLICK FOR VIDEO]({{ site.url }}/scrambledev/assets/images/UN.png)](https://www.youtube.com/watch?v=-C6V_bEmOEQ&t=608s)
 

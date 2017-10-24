@@ -1,14 +1,15 @@
 ---
-title: 'Development part 3: Modeling atmosphere'
+title: 'Development part 3: Modeling the atmosphere'
 layout: post
 ---
 
 *Please not that these features where implemented in the early stage, prior to  logging the progress.  Not all details are included.*
 
-The accuracy of the flight model depends on the atmosphere model. The ISA standard atmosphere up to stratosphere altitude is modelled for best accuracy. The main references are found [here](http://www.wxaviation.com/ISAweb-2.pdf), and [here](https://www.grc.nasa.gov/www/k-12/airplane/atmosmet.html).  The temperature, air density and pressure is computed up to stratosphere altitude.
+The accuracy of the flight model depends on the atmosphere model. Initially, the air density was considered constant in order to simplify the flight model.  In reality, air density decreases with altitude and air is not considered incompressible anymore if you fly fast enough. The ISA standard atmosphere up to stratosphere altitude is modelled for best accuracy. The main references are found [here](http://www.wxaviation.com/ISAweb-2.pdf),  [here](https://www.grc.nasa.gov/www/k-12/airplane/atmosmet.html), [here](http://s6.aeromech.usyd.edu.au/aerodynamics/index.php/sample-page/properties-of-the-atmosphere/variation-with-altitude/) and [here](http://nptel.ac.in/courses/112103021/module2/lec6/1.html).  The temperature, air density and pressure is computed up to stratosphere altitude.
+
+![ISA]({{ site.url }}/scrambledev/assets/images/ISA.png)
 
 ## Formulas
-![ISA]({{ site.url }}/scrambledev/assets/images/ISA.png)
 
 For altitudes up to 11km the following formulas are used:
 
