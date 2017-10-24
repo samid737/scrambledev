@@ -1,13 +1,61 @@
 ---
-title: 'Development part 1: Basic setup,sprite, physics system, world.'
+title: 'Development part 1: Modeling Aircraft, physics system, world.'
 layout: post
 ---
 
 *Please not that these features where implemented in the early stage, prior to  logging the progress.  Not all details are included.*
 
-## Sprite building
+## Modeling aircraft
+
+### Sprite building
 
 Once the [overall aircraft design ](/scrambledev/2017/01/16/aircraft-design-part-1.html) is complete, the MIG21 is split up into components and  A spritesheet is made using [TexturePacker](https://www.codeandweb.com/texturepacker). Phaser allows for hierarcichal setup of sprites. The parent sprite is the main body/fuselage, while other components (landing gear, elevators etc.) are set as [child sprites](https://phaser.io/examples/v2/sprites/child-sprites).
+
+### Extending A Phaser Sprite
+
+Scramble JS uses an object oriented approach to model the aircraft. It is treated as an object having numerous properties (length, wingspan, engine power etc.) and methods (retract landing gear, adjust throttle) that define the object and also determine the state of the object. Phaser facilitates this approach by allowing further extension/customization of the existing Phaser.Sprite class. The implemention in Phaser is done by extending the [Phaser.Sprite ](https://phaser.io/examples/v2/sprites/extending-sprite-demo-2)object with custom properties and creating A new instance of that specific object. 
+
+### Properties and methods
+
+The Aircraft object continously changes and A full list is of properties is not provided.  To provide A brief overview of what is considered in defining the aircraft:
+
+
+#### Properties
+
+- Aircraft dimensions
+  - wingspan
+  - length
+  - height
+- Aerodynamics
+  - lift coefficients
+  - drag coefficients
+  -  maximum angle of attack
+- Propulsion
+  - Engine thrust
+  - number of engines
+- Operating limits
+  - Operating weights
+  - Centre of gravity limtis
+  - V limits, (vlof, vstall, vlg,vmax)
+- Input & Control
+  - maximum elevator deflection
+  - type of  control system (mechanics, hydraulic)
+  -  Pitch limitation
+- Autopilot related properties     
+
+#### Methods
+
+- Control & input
+  - landing gear retraction, extension
+  - flight control input
+  - autopilot controller
+  - Throttle control
+- Flight state checks:
+   -	stall
+	 -  supersonic flight
+	 - approach check
+	 - pilot g limits
+	 -structural limits
 
 ## Physics system
 At this point, there is no physics involved,  just A sprite placed somewhere inside the game world. By using Phaser its [arcade physics](https://phaser.io/examples/v2/category/arcade-physics) system, we can begin giving some physical sense to the aircraft sprite (inside Phaser). The aircraft is considered to be A single rigidbody ([Assumption](#)).  Arcade physics is perfectly suitable for rigidbody dynamics and we can rotate and translate the aircraft using the following physics properties:

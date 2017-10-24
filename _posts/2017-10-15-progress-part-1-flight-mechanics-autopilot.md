@@ -8,7 +8,7 @@ Last week I worked on two features that are crucial during flight:
 ##  Head up display (HUD).
 
 ![display]({{ site.url }}/scrambledev/assets/images/screenshots/HUD1.png)
-
+##### note that the text in white is used for debugging and is not part of the HUD.
 The HUD is pretty similar to the one used in [Aero Elite Combat academy](https://i.ytimg.com/vi/bBFGRPCQngE/maxresdefault.jpg), A minimalistic HUD. It provides all the essential flight information for combat aircraft flight, leaving out all the flight systems that can [fill](https://i.ytimg.com/vi/1UrF6bmwe_E/maxresdefault.jpg) up the entire display field. The sim is in 2D in longitudinal direction, therefore heading display is removed and the pitch ladder is locked to pitch motion.
 
 Flight info included:
@@ -29,7 +29,7 @@ Flight info included:
 ##  Secondary flight controls.
 
 ### High lift devices
-I played around and tried to land and take-off with the current state of the flight model and I was quickly able to confirm the difficulties that arise with low-speed flight for high speed aircraft This also proved the flight model has a pretty high level of accuracy. The angle of attack can increase to A critical angle when lowering speed at A steady (low) altitude, resulting in low speed stall. Without high lift devices, there is no mechanism to deal with such critical angle of attack. The player must be able to Take off and land, so it was necessary to consider high lift devices.  
+I played around and tried to land and take-off with the current state of the flight model and I was quickly able to confirm the difficulties that arise with low-speed flight for high speed aircraft This also proved the flight model has a pretty high level of accuracy. The angle of attack can increase to A critical angle when lowering speed at A steady (low) altitude, resulting in stalled flight. Without high lift devices, there is no mechanism to deal with such critical angle of attack. The player must be able to Take off and land, so it was necessary to consider high lift devices.  
 Flaps will be the available as A high lift device. Flaps will influence the lift coefficient by increasing it at the same angle of attack .  This will allow the user deal with low-speeds well within angle of attack margins. [This](https://ieeenitk.org/blog/High-Lift-devices/) article explains it briefly. 
 
 The aircraft is assumed to have two flap settings, with two coefficients that will be added to the lift coefficient whenever flaps are deployed. The pseudocode:

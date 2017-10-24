@@ -99,3 +99,5 @@ Notice the acceleration terms $$a_x$$ and $$a_y$$ are immediately found if all f
 ### Rotation
 
 Phaser also allows the user to set [angularAcceleration](https://phaser.io/docs/2.6.2/index#angularAcceleration) , which is precisely what we need in our case. The challenge is to find values for torque and moment of Inertia. The moment of Inertia can be easily calculated by assuming the aircraft to be of elliptical shape([Assumption]()). The torque that is applied varies with time and (luckily) we can find values for torque numerically. The centre of gravity of the rigidbody is assumed to be fixed along the longitudinal axis of the aircraft ([Assumption]()).
+
+*Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*

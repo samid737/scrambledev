@@ -44,3 +44,5 @@ where $$\boldsymbol{v}$$ is the speed of the aircraf, $$\boldsymbol{M}$$ the Mac
 ## Modeling
 
 The formulas are directly applied and computed every 0.25 seconds to avoid unnecessary computation. I still have to consider  whether caching precomputed values is A better solution, but I will hold that thought for the optimization phase. Gravity is assumed to be constant with increase in altitude ([Assumption]()). World atmospheric conditions are yet to be implemented. Wind is yet to be implemented.
+
+*Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*
