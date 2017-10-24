@@ -15,9 +15,9 @@ Once the [overall aircraft design ](/scrambledev/2017/01/16/aircraft-design-part
 
 Scramble JS uses an object oriented approach to model the aircraft. It is treated as an object having numerous properties (length, wingspan, engine power etc.) and methods (retract landing gear, adjust throttle) that define the object and also determine the state of the object. Phaser facilitates this approach by allowing further extension/customization of the existing Phaser.Sprite class. The implemention in Phaser is done by extending the [Phaser.Sprite ](https://phaser.io/examples/v2/sprites/extending-sprite-demo-2)object with custom properties and creating A new instance of that specific object. 
 
-### Properties and methods
+### Properties and methods considered
 
-The Aircraft object continously changes and A full list is of properties is not provided.  To provide A brief overview of what is considered in defining the aircraft:
+The Aircraft object continously changes and so the class object code  is not provided. Conceptually, the following is considered in defining the aircraft:
 
 
 #### Properties
@@ -29,36 +29,39 @@ The Aircraft object continously changes and A full list is of properties is not 
 - Aerodynamics
   - lift coefficients
   - drag coefficients
-  -  maximum angle of attack
+  - maximum angle of attack
 - Propulsion
-  - Engine thrust
+  - engine thrust
   - number of engines
 - Operating limits
-  - Operating weights
-  - Centre of gravity limtis
-  - V limits, (vlof, vstall, vlg,vmax)
-- Input & Control
+  - operating weights
+  - centre of gravity limtis
+  - speed limits, (vlof, vstall, vlg,vmax)
+- input & Control
   - maximum elevator deflection
   - type of  control system (mechanics, hydraulic)
-  -  Pitch limitation
+  - pitch limitation
 - Autopilot related properties     
 
 #### Methods
 
 -  Input & control
-  - landing gear retraction, extension
-  - flight control input
-  - autopilot controller
-  - Throttle control
+   - landing gear retraction, extension
+   - flight control input
+   - autopilot controller
+   - throttle control
 - Flight state checks:
    -	stall
 	 -  supersonic flight
 	 - approach check
 	 - pilot g limits
-	 -structural limits
+	 - structural limits
 
 ## Physics system
-At this point, there is no physics involved,  just A sprite placed somewhere inside the game world. By using Phaser its [arcade physics](https://phaser.io/examples/v2/category/arcade-physics) system, we can begin giving some physical sense to the aircraft sprite (inside Phaser). The aircraft is considered to be A single rigidbody ([Assumption](#)).  Arcade physics is perfectly suitable for rigidbody dynamics and we can rotate and translate the aircraft using the following physics properties:
+At this point, there is no physics involved,  just A sprite placed somewhere inside the game world. By using Phaser its [arcade physics](https://phaser.io/examples/v2/category/arcade-physics) system, we can begin giving some physical sense to the aircraft sprite (inside Phaser). The aircraft is considered to be A single rigidbody ([Assumption](#)).  
+
+### Built in properties
+Arcade physics is perfectly suitable for rigidbody dynamics and we can rotate and translate the aircraft using the following physics properties:
 
 *  acceleration.
 *  velocity.
@@ -67,6 +70,7 @@ At this point, there is no physics involved,  just A sprite placed somewhere ins
 *  angularVelocity.
 *  rotation.
 
+### Collision detection
 Arcade Physics collision detection is based upon Axis aligned boundary box (AABB) collision detection. For this game, collision detection is required for the following scenarios:
 
 * ground impact.
@@ -81,7 +85,7 @@ Scramble JS will be in 2D side view , hence the world is 2D, similar to UN Squad
 
 [![CLICK FOR VIDEO]({{ site.url }}/scrambledev/assets/images/UN.png)](https://www.youtube.com/watch?v=-C6V_bEmOEQ&t=608s)
 
-The frame of refence is pretty tricky to implement. In UN Squadron, the player can move around, but is bounded by the viewport and all objects are moving towards the player. This works fine for arcade/action gameplay, but for a simulated flight, it will make less sense. The game world is simulated using real world dimensions (everything is in SI units) and the level of action is not like in UN Squadron. 
+The frame of refence is pretty tricky to implement. In UN Squadron, the player can move around, but is bounded by the viewport and all objects are moving towards the player. This works fine for arcade/action gameplay, but for flight simulation, it will make less sense. The game world is simulated using real world dimensions (everything is in SI units) and the level of action is not like in UN Squadron. 
 
 The player can move around freely inside A simulated 2D world. In Phaser, you can set the size of your game world using A function called setBounds(). A simulated world is setup by adjusting the world size to some  large (but not infinite) size. Since combat aircraft fly below the  [stratosphere](http://www.online-sciences.com/wp-content/uploads/2014/09/stratosphere-layer-11.jpg),  the height of the world will be less than the height of the stratosphere [ Assumption](#). I still have to think about A solution for the width of the world. It may be fixed, but could also vary with each mission.
 
