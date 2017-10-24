@@ -3,15 +3,15 @@ title: 'Development part 2: modeling EOM'
 layout: post
 ---
 
-*Please not that these features where implemented at an early stage, prior to  logging the progress.  Not all details are included.*
+*Please not that these features where implemented in the early stage, prior to  logging the progress.  Not all details are included.*
 
-Normally when working on A flight simulator, you consider motion in three dimensions. There are quite alot of resources and even [example projects](https://www.google.nl/search?q=flight+simulator+github) available that implement flight in three dimensions.  These however rely on A particular set of assumptions. The problem in my case is that my assumptions differ from the reference material. The good news however lies in the number two of 2D, I can bypass an entire dimension...
+Normally when working on A flight simulator, you consider motion in three dimensions. There are quite alot of resources and even [example projects](https://www.google.nl/search?q=flight+simulator+github) available that implement flight in three dimensions. However, these rely on A particular set of assumptions. The problem in my case is that my assumptions differ from the reference material. The good news however lies in the number two of 2D, I can bypass an entire dimension...
 
 ## Equations of motion (EOM)
 
-There are a view fundemental equations I applied to determine the motion of the aircraft and the main source  is the [Flight and Orbital Mechanics](https://ocw.tudelft.nl/courses/flight-orbital-mechanics/) course I took, given  by Dr. ir. M. Voskuijl.
+There are A view fundemental equations I applied to determine the motion of the aircraft and the main source  is the [Flight and Orbital Mechanics](https://ocw.tudelft.nl/courses/flight-orbital-mechanics/) course I took, given  by Dr. ir. M. Voskuijl.
 
-Basically this course deals with the mechanics involved during every phase of flight (take-off, climb, cruise, descent, landing) and the nice part is, complete derivations are  included for 2D longitudinal flight.
+Basically this course deals with the mechanics involved during every phase of flight (take-off, climb, cruise, descent, landing) and the nice part is that complete derivations are  included for 2D longitudinal flight !
 
 ### Translation
 
@@ -24,7 +24,7 @@ For translational motion, the following equations are applied for 2D longitudina
 	where $$ \boldsymbol{\theta}$$ is the pitch angle, $$\boldsymbol{\gamma}$$ is the flight path angle, $$\boldsymbol{L}$$ the Lift force, $$\boldsymbol{D}$$ the drag force, $$\boldsymbol{T}$$ the total thrust and $$\boldsymbol{W}$$ is the weight of the aircraft (and $$\boldsymbol{m}$$ the mass, being $$\boldsymbol{\frac{W}{g}}$$).
  {% endraw %}
 
-In most derivations, the flight path angle is approximated to be small, but this does not hold for this flight model ([Assumption](#)). The thrust force is therefore dependent on the pitch angle, not flight path angle. The force is however assumed to act along the body axis of the aircraft, so inclination angles engines is not considered  ([Assumption](#)).
+In most derivations, the flight path angle is approximated to be small, but this does not hold for this flight model ([Assumption](#)). The thrust force is therefore dependent on the pitch angle, not flight path angle. The force is  assumed to act along the body axis of the aircraft, so inclination angle of engines is  not considered  ([Assumption](#)).
 
 #### Weight
 
@@ -53,7 +53,7 @@ The lift coefficient is A [linear function of the angle of attack](https://qph.e
 	where $$ \boldsymbol{\frac{dC_L}{d\alpha}}$$ is the lift slope, $$\boldsymbol{\alpha}$$the angle of attack , $$\boldsymbol{a_{L=0}}$$ the zero lift angle of attack.
  {% endraw %}
 
-The angle of attack is  the parameter that can be controlled by rotating the aircraft A wing surface area can be controlled using high lift devices, but A constant wing surface is assumed for this flight model ([Assumption](#)). Thereforce, the Lift force is controlled by rotating/pitching the aircraft In a three dimensional world, the lift force will vary along the spanwise direction of the wing. Since we are dealing with A two dimensional wing, we can neglect spanwise lift distribution ([Assumption](#)).
+The angle of attack is  the parameter that can be controlled by rotating the aircraft A wing surface area can be controlled using high lift devices, but A constant wing surface is assumed for this flight model ([Assumption](#)). The lift force is controlled by rotating/pitching the aircraft. In a three dimensional world, the lift force will vary along the spanwise direction of the wing. Since we are dealing with A two dimensional wing, we can neglect spanwise lift distribution ([Assumption](#)).
 
 #### Drag
 

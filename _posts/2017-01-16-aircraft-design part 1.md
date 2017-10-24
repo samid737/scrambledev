@@ -3,7 +3,7 @@ title: 'Design part 1: MIG-21'
 layout: post
 ---
 
-*Please not that these features where implemented in an early stage, prior to  logging the progress.  Not all details are included.*
+*Please not that these features where implemented in the early stage, prior to  logging the progress.  Not all details are included.*
 
 The [MIG-21 FISHBED](https://en.wikipedia.org/wiki/Mikoyan-Gurevich_MiG-21) will be one of the featured aircraft. This is the first aircraft being designed. I still have to think about which other aircraft to add in the future, but the first aircraft that came into mind was the FISHBED.  The MIG-21 is the most widely produced military jet and has earned its place in aircraft history. [Here](https://www.youtube.com/watch?v=6AlsW_Xx3dg) is A nice video demonstrating that this machine is a supersonic rocket equipped with wings (and pilot).
 

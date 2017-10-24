@@ -1,26 +1,28 @@
-title: Scramble dev log
-description: 2D combat flight simulator. By samid737
+title: Scramble Development Log
+description: 2D combat flight simulator. By @samid737
 show_downloads: true
 
 baseurl: "/scrambledev" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
 url: "https://samid737.github.io" # change this to the base hostname & protocol for your site
 
-google_analytics:
-# cayman-blog date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+
 cayman-blog:
   date_format: "%b %-d, %Y"
 
 theme: # leave it empty
-
+logo: "/assets/images/PlayerDesert.png"
 # social
 author: "Dara Sami"
-image: /thumbnail-jumbo.png
+image: "/assets/images/PlayerDesert.png"
 
 #  site:
-facebook:
+#facebook:
   #publisher: 1592372034171500
   #profile_id: 1809805629
-  app_id: 1798910940422432 # cayman-blog
+#  app_id: 1798910940422432 # cayman-blog
   #authors: lorepirri
 #  admins:
+
+#plugins
+plugins:
+  - jekyll-seo-tag

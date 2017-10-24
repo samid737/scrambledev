@@ -31,6 +31,8 @@ GEM
       sinatra-contrib (~> 1.4)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
+    jekyll-seo-tag (2.3.0)
+      jekyll (~> 3.3)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.15.0)
@@ -76,6 +78,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll-admin
+  jekyll-seo-tag
   jekyll-theme-cayman-blog!
 
 BUNDLED WITH
