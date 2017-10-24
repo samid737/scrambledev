@@ -1,5 +1,5 @@
 title: Scramble Development Log
-description: 2D combat flight simulator. By @samid737
+description: 2D combat flight simulator. By samid737.
 show_downloads: true
 
 baseurl: "/scrambledev" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
@@ -22,6 +22,9 @@ image: "/assets/images/PlayerDesert.png"
 #  app_id: 1798910940422432 # cayman-blog
   #authors: lorepirri
 #  admins:
+
+
+google_analytics: "UA-107485622-2"
 
 #plugins
 plugins:
