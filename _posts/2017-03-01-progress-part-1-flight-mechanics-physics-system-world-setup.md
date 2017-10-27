@@ -59,7 +59,7 @@ Initially, the following aspects are considered for the flight model. Some of th
 	 - structural limits
 
 ## Physics system
-At this point, there is no physics involved,  just A sprite placed somewhere inside the game world. By using Phaser its [arcade physics](https://phaser.io/examples/v2/category/arcade-physics) system, we can begin giving some physical sense to the aircraft sprite (inside Phaser). The aircraft is considered to be A single rigidbody ([Assumption](#)) and we will try sticking to rigidbody dynamics and we will avoid diving into advanced aerodynamics. For now, supersonics are not considered. A subsonic aircaft is modeled, calibrated, tested first and if approximations/simplifcations turn out to be unacceptable, we consider the necesarry adjustments for supersonic flight.  
+At this point, there is no physics involved,  just A sprite placed somewhere inside the game world. By using Phaser its [arcade physics](https://phaser.io/examples/v2/category/arcade-physics) system, we can begin giving some physical sense to the aircraft sprite (inside Phaser). The aircraft is considered to be A single rigidbody ([Assumption](#)) and we will try sticking to rigidbody dynamics. For now, supersonic flight is not considered. A subsonic aircaft is modeled, calibrated, tested first and if approximations/simplifcations turn out to be unacceptable, we consider the necesarry adjustments for supersonic flight.  
 
 ### Built in properties
 Arcade physics is perfectly suitable for rigidbody dynamics and we can rotate and translate the aircraft using the following physics properties:
