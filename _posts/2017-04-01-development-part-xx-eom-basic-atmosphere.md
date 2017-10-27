@@ -11,13 +11,11 @@ Normally when working on A flight simulator, you consider motion in three dimens
 
 ## Equations of motion (EOM)
 
-There are A view fundemental equations I applied to determine the motion of the aircraft and the main source  is the [Flight and Orbital Mechanics](https://ocw.tudelft.nl/courses/flight-orbital-mechanics/) course I took, given  by Dr. ir. M. Voskuijl.
-
-Basically this course deals with the mechanics involved during every phase of flight (take-off, climb, cruise, descent, landing) and the nice part is that complete derivations are  included for 2D longitudinal flight !
+To upgrade the current model, the aircraft is in need of some equations of motion.There are A view fundemental equations I applied to determine the motion of the aircraft and the main source  is the [Flight and Orbital Mechanics](https://ocw.tudelft.nl/courses/flight-orbital-mechanics/) course I took, given  by Dr. ir. M. Voskuijl. Basically this course deals with the mechanics involved during every phase of flight (take-off, climb, cruise, descent, landing) and the nice part is that complete derivations are  included for 2D longitudinal flight!
 
 ### Translation
 
-The free body diagram:
+The free body diagram looks like:
 
 ![ISA]({{ site.url }}/scrambledev/assets/images/FBD.png)
 
@@ -51,15 +49,17 @@ The lift force is basically determined by the shape of the wing, air density, th
 	where $$ \boldsymbol{\rho}$$ is the air density, $$\boldsymbol{S}$$ is the wing surface area, $$\boldsymbol{v}$$ the speed of the aircraft, $$\boldsymbol{C_L}$$ the lift coefficient of the aircraft.
  {% endraw %}
 
-For now, the thin [Airfoil theory](http://s6.aeromech.usyd.edu.au/aerodynamics/index.php/sample-page/subsonic-aerofoil-and-wing-theory/2-d-thin-aerofoil-theory/) for subsonic flow is applied and the lift coefficient is assumed to be A [linear function of the angle of attack](https://qph.ec.quoracdn.net/main-qimg-92f5bb8bbe8f7088e166a2fb64fbce41): 
+$$C_L$$  is a variable that depends on the shape of the wing/airfoil your dealing with. There are different ways to find A solution for $$C_L$$.  Solutions can be found by applying linearized aerodynamics (theoretical), using computational models (numerical) or  doing real wind tunnel measurements (experimental).
+
+For this simulation  basic, linearized aerodynamics is considered ([Assumption]()).The thin [Airfoil theory](http://s6.aeromech.usyd.edu.au/aerodynamics/index.php/sample-page/subsonic-aerofoil-and-wing-theory/2-d-thin-aerofoil-theory/) for incompressible, subsonic flow is applied and the lift coefficient is assumed to be A [linear function of the angle of attack](https://qph.ec.quoracdn.net/main-qimg-92f5bb8bbe8f7088e166a2fb64fbce41), with varying slope values : 
 
 {% raw %}
   $$\boldsymbol{ C_L = \frac{dC_L}{d\alpha}(\alpha - a_{L=0})}$$  \\
 	\\
-	where $$ \boldsymbol{\frac{dC_L}{d\alpha}}$$ is the lift slope, $$\boldsymbol{\alpha}$$the angle of attack , $$\boldsymbol{a_{L=0}}$$ the zero lift angle of attack.
+	where $$ \boldsymbol{\frac{dC_L}{d\alpha}}$$ is the lift slope(usually $$2\pi$$), $$\boldsymbol{\alpha}$$, the angle of attack , $$\boldsymbol{a_{L=0}}$$ the zero lift angle of attack.
  {% endraw %}
 
-This will have to be modified if supersonic flight is considered, but to achieve at least some tangible result for the flight model, we build upon the assumption. The angle of attack is  the parameter that can be controlled by rotating the aircraft A wing surface area can be controlled using high lift devices, but A constant wing surface is assumed for this flight model ([Assumption](#)). The lift force is controlled by rotating/pitching the aircraft. In a three dimensional world, the lift force will vary along the spanwise direction of the wing. Since we are dealing with A two dimensional wing, we can neglect spanwise lift distribution ([Assumption](#)).
+The angle of attack is  the parameter that can be controlled by rotating the aircraft. The wing surface area could be controlled using high lift devices, but A constant wing surface is assumed for this flight model ([Assumption](#)). The lift force is controlled by rotating/pitching the aircraft. In a three dimensional world, the lift force will vary along the spanwise direction of the wing. Since we are dealing with A two dimensional wing, we can neglect spanwise lift distribution ([Assumption](#)).For supersonic flight, corrections are probably necessary, but to achieve at least some tangible result for the flight model, we build upon the assumption. Another limitation of this theory is that there is no equation that describes $$C_L$$ during stall. This means that the stall behaviour must be determined manually.
 
 #### Drag
 
@@ -99,8 +99,64 @@ The equations shows that If the torque can be controlled, then the rotation/pitc
 
 ## Modeling EOM
 
+So in order for all the  those equations to peacefully work together, lets think of A way to model them in Phaser.
+
 ### Translation
-Notice the acceleration terms $$a_x$$ and $$a_y$$ are immediately found if all forces are known. A physics body in Phaser has an [acceleration](https://phaser.io/docs/2.6.2/Phaser.Physics.Arcade.Body.html#acceleration) property, so the challenge is to find these quantities, scale them by some factor (Phaser works with pixels units) and apply those values to the Arcade Physics system in order to fly. 
+
+Notice the acceleration terms $$a_x$$ and $$a_y$$ are immediately found if all forces are known. A physics body in Phaser has an [acceleration](https://phaser.io/docs/2.6.2/Phaser.Physics.Arcade.Body.html#acceleration) property, so the challenge is to find these quantities, scale them by some factor (Phaser works with pixels units) and apply those values to the Arcade Physics system in order to translate the aircraft (no rotation yet!).  Lets look at each force one more time:
+
+#### Weight
+
+ ![weight](https://i.stack.imgur.com/DT38B.png)
+
+The aircraft takes off carrying certain weight. There are three weights that matter for now:
+
+- Fuel: you start with some fuel on board, fly around in two, three circles and end with some reserve fuel left (according to strict rules, but lets not involve them).
+- Payload: cargo, weapons, passengers, etc.
+- Empty weight: the weight of the aircraft without payload or fuel.
+
+The numbers are pretty easy to find for any aircraft. These numbers are initialized as properties of the aircraft, and you end up with something like this:
+
+```
+	this.FW = 2000; 
+	this.OEW = 5000; 
+	this.OW = (this.OEW + this.FW) ; //operating/ take-off weight
+```
+
+##### this refers to the aircraft object instance.
+
+As the aircraft flies around it will burn fuel over time at some rate. The fuel burn rate (fuel flow) is assumed to linear to the available thrust( [Assumption])() and depends on the specific fuel consumption of the engine:
+
+```
+		myAircraft.FF = myAircraft.SFC  * myAircraft.availableThrust;
+		myAircraft.FW -= FF / 60;
+```
+
+#### Thrust
+
+An accurate thrust model needs an accurate engine model, which is difficult to model. To avoid the  complexity, A general thrust model is used:
+
+```
+		myAircraft.availableThrust = myAircraft.thrustMSL*(rho/rhoMSL)*myAircraft.throttleActual;
+```
+
+#### Lift 
+
+The aircraft is modelled to A symmetric wing with $$\alpha_{L=0}=0$$ and  $$\frac{d_{C_L}}{d\alpha}=2\pi$$.
+The lift equation is directly applied.
+To model stall characteristics, the maximum lift coefficient $$C_{L_{max}}$$ is used as A threshold value. The aircraft has A stalling state and if $$C_{L_{max}}$$ is exceeded, it will enter the stalling state and $$C_L$$ is disturbed:
+
+```
+	if (myAircraft.stalling) {
+			myAircraft.CLift -= Math.random() * 0.2 ;
+		}
+```
+
+The fuselage lift contribution is currently neglected ([Assumption]()). 
+
+#### Drag
+
+The drag polar needs A value for $$C_{D0}$$ . Typical values are considered for $$C_{D0}$$. The other values are according to the design of the MIG21. $$C_{D0}$$. The drag equation is directly applied. Increase in $$C_{D0}$$  due to landing gear extension is accounted for.
 
 ### Rotation
 

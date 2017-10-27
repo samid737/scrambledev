@@ -15,11 +15,11 @@ Once the [overall aircraft design ](/scrambledev/2017/01/16/aircraft-design-part
 
 ### Extending A Phaser Sprite
 
-Scramble JS uses an object oriented approach to model the aircraft. It is treated as an object having numerous properties (length, wingspan, engine power etc.) and methods (retract landing gear, adjust throttle) that define the object and also determine the state of the object. Phaser facilitates this approach by allowing further extension/customization of the existing Phaser.Sprite class. The implemention in Phaser is done by extending the [Phaser.Sprite ](https://phaser.io/examples/v2/sprites/extending-sprite-demo-2)object with custom properties and creating A new instance of that specific object. 
+Scramble JS uses an object oriented approach to model the aircraft. It is treated as an object having numerous properties (length, wingspan, engine power etc.) and methods (retract landing gear, adjust throttle) that define the object and also determine the state of the object. Phaser facilitates this approach by allowing further extension/customization of the existing Phaser.Sprite class. The implemention in Phaser is done by extending the [Phaser.Sprite ](https://phaser.io/examples/v2/sprites/extending-sprite-demo-2)object with custom properties and creating A new instance of that object afterwards.
 
-### Properties and methods considered
+### Aircraft Object.
 
-The Aircraft object continously changes and so the class object code  is not provided. Conceptually, the following is considered in defining the aircraft:
+Initially, the following aspects are considered for the flight model. Some of them are state properties, some of them define the aircraft, but to give an overview:
 
 #### Properties
 
@@ -59,7 +59,7 @@ The Aircraft object continously changes and so the class object code  is not pro
 	 - structural limits
 
 ## Physics system
-At this point, there is no physics involved,  just A sprite placed somewhere inside the game world. By using Phaser its [arcade physics](https://phaser.io/examples/v2/category/arcade-physics) system, we can begin giving some physical sense to the aircraft sprite (inside Phaser). The aircraft is considered to be A single rigidbody ([Assumption](#)). For now, supersonics are not considered. A subsonic aircaft is modeled, calibrated, tested first and if necessary (the approximation errors are intolerable), we consider supersonic flight.  
+At this point, there is no physics involved,  just A sprite placed somewhere inside the game world. By using Phaser its [arcade physics](https://phaser.io/examples/v2/category/arcade-physics) system, we can begin giving some physical sense to the aircraft sprite (inside Phaser). The aircraft is considered to be A single rigidbody ([Assumption](#)) and we will try sticking to rigidbody dynamics and we will avoid diving into advanced aerodynamics. For now, supersonics are not considered. A subsonic aircaft is modeled, calibrated, tested first and if approximations/simplifcations turn out to be unacceptable, we consider the necesarry adjustments for supersonic flight.  
 
 ### Built in properties
 Arcade physics is perfectly suitable for rigidbody dynamics and we can rotate and translate the aircraft using the following physics properties:
@@ -110,5 +110,9 @@ At this point I added basic keyboard cursor input just to goof around. The fligh
 {% endraw %}
 
 #### All examples are embedded from the [Phaser examples](https://phaser.io/examples) (MIT License) and are not owned by me in any way.
+
+## What's next
+
+The next question is: How to add the word flight to the current model?  The answer is found in [Development part 2: Modeling EOM](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html).
 
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*
