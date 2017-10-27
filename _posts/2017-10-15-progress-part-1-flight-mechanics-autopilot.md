@@ -1,5 +1,5 @@
 ---
-title: 'Development part X: Head up display, Secondary flight controls'
+title: 'Features part 1: Head up display, Secondary flight controls'
 layout: post
 ---
 

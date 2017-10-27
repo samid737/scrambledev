@@ -59,7 +59,7 @@ The Aircraft object continously changes and so the class object code  is not pro
 	 - structural limits
 
 ## Physics system
-At this point, there is no physics involved,  just A sprite placed somewhere inside the game world. By using Phaser its [arcade physics](https://phaser.io/examples/v2/category/arcade-physics) system, we can begin giving some physical sense to the aircraft sprite (inside Phaser). The aircraft is considered to be A single rigidbody ([Assumption](#)).  
+At this point, there is no physics involved,  just A sprite placed somewhere inside the game world. By using Phaser its [arcade physics](https://phaser.io/examples/v2/category/arcade-physics) system, we can begin giving some physical sense to the aircraft sprite (inside Phaser). The aircraft is considered to be A single rigidbody ([Assumption](#)). For now, supersonics are not considered. A subsonic aircaft is modeled, calibrated, tested first and if necessary (the approximation errors are intolerable), we consider supersonic flight.  
 
 ### Built in properties
 Arcade physics is perfectly suitable for rigidbody dynamics and we can rotate and translate the aircraft using the following physics properties:
@@ -72,7 +72,7 @@ Arcade physics is perfectly suitable for rigidbody dynamics and we can rotate an
 *  rotation.
 
 ### Collision detection
-Arcade Physics collision detection is based upon Axis aligned boundary box (AABB) collision detection. For this game, collision detection is required for the following scenarios:
+Arcade Physics collision detection is based upon Axis aligned bounding box (AABB) collision detection. For this game, collision detection is required for the following scenarios:
 
 * ground impact.
 * bullets/missile impact
@@ -94,6 +94,21 @@ You can also let the main camera follow the player. The main camera follows the 
 
 TODO
 
+## Result
 
+At this point there is nothing exciting going on (yet),  just an aircraft assembled and A sky gradient. For debugging purposes, the [arcade physics debug  plugin](https://github.com/samme/phaser-plugin-debug-arcade-physics) is used. This plugin displays velocity and acceleration vectors of any physics body in Phaser, which is extremely useful when inspecting variables.
+
+![ISA]({{ site.url }}/scrambledev/assets/images/screenshots/PART1.png)
+
+The circle around the body displays the speed (magnitude of velocity) nicely. I have also added some custom lines using [Phaser Geometry](https://phaser.io/examples/v2/category/geometry) to display normal acceleration (green), lift force, drag force, because i'm pretty sure this will be useful later on. 
+
+At this point I added basic keyboard cursor input just to goof around. The flight realism is nowhere to be found yet. Right  now you can freely move around, kind of like [this](//examples.phaser.io/embed.php?f=weapon/asteroids.js) example:
+
+{% raw %}
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="800" height="600" src="//examples.phaser.io/embed.php?f=weapon/asteroids.js"></iframe>
+{% endraw %}
+
+#### All examples are embedded from the [Phaser examples](https://phaser.io/examples) (MIT License) and are not owned by me in any way.
 
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*
