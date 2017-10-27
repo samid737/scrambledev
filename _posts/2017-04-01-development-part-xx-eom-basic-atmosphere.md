@@ -51,7 +51,7 @@ The lift force is basically determined by the shape of the wing, air density, th
 
 $$C_L$$  is a variable that depends on the shape of the wing/airfoil your dealing with. There are different ways to find A solution for $$C_L$$.  Solutions can be found by applying linearized aerodynamics (theoretical), using computational models (numerical) or  doing real wind tunnel measurements (experimental).
 
-For this simulation  basic, linearized aerodynamics is considered ([Assumption]()).The thin [Airfoil theory](http://s6.aeromech.usyd.edu.au/aerodynamics/index.php/sample-page/subsonic-aerofoil-and-wing-theory/2-d-thin-aerofoil-theory/) for incompressible, subsonic flow is applied and the lift coefficient is assumed to be A [linear function of the angle of attack](https://qph.ec.quoracdn.net/main-qimg-92f5bb8bbe8f7088e166a2fb64fbce41), with varying slope values : 
+For this simulation  basic, linearized aerodynamics is considered ([Assumption]()).The [thin Airfoil theory](http://s6.aeromech.usyd.edu.au/aerodynamics/index.php/sample-page/subsonic-aerofoil-and-wing-theory/2-d-thin-aerofoil-theory/) for incompressible, subsonic flow is applied and the lift coefficient is assumed to be A [linear function of the angle of attack](https://qph.ec.quoracdn.net/main-qimg-92f5bb8bbe8f7088e166a2fb64fbce41), with varying slope values : 
 
 {% raw %}
   $$\boldsymbol{ C_L = \frac{dC_L}{d\alpha}(\alpha - a_{L=0})}$$  \\
@@ -59,7 +59,7 @@ For this simulation  basic, linearized aerodynamics is considered ([Assumption](
 	where $$ \boldsymbol{\frac{dC_L}{d\alpha}}$$ is the lift slope(usually $$2\pi$$), $$\boldsymbol{\alpha}$$, the angle of attack , $$\boldsymbol{a_{L=0}}$$ the zero lift angle of attack.
  {% endraw %}
 
-The angle of attack is  the parameter that can be controlled by rotating the aircraft. The wing surface area could be controlled using high lift devices, but A constant wing surface is assumed for this flight model ([Assumption](#)). The lift force is controlled by rotating/pitching the aircraft. In a three dimensional world, the lift force will vary along the spanwise direction of the wing. Since we are dealing with A two dimensional wing, we can neglect spanwise lift distribution ([Assumption](#)).For supersonic flight, corrections are probably necessary, but to achieve at least some tangible result for the flight model, we build upon the assumption. Another limitation of this theory is that there is no equation that describes $$C_L$$ during stall. This means that the stall behaviour must be determined manually.
+The angle of attack is  the parameter that can be controlled by rotating the aircraft. The wing surface area could be controlled using high lift devices, but A constant area is assumed for this flight model ([Assumption](#)). The lift force is controlled by rotating/pitching the aircraft. In a three dimensional world, the lift force will vary along the spanwise direction of the wing. Since we are dealing with A two dimensional wing, we can neglect spanwise lift distribution ([Assumption](#)).For supersonic flight, corrections are probably necessary, but to achieve at least some tangible result for the flight model, we build upon the assumption. Another limitation of this theory is that there is no equation that describes $$C_L$$ during stall. This means that the stall behaviour must be determined manually.
 
 #### Drag
 
