@@ -208,10 +208,11 @@ The torque varies over time, but(luckily) values for $$\tau$$ are found numerica
 
 ## Result
 
-The previous model is finely adjusted to make some physical sense. To demonstrate, lets do A free-fall at an altitude of 50.000ft, with minimal lift contribution ($$\frac{dC_L}{d\alpha}\approx 0.02$$) and observe its dynamics:
+The previous model is adjusted to make some physical sense. To demonstrate, lets do A free-fall at an altitude of 50.000ft, with minimal lift contribution ($$\frac{dC_L}{d\alpha}\approx 0.02$$), A little bit nose heavy and observe the dynamics:
 
-TODO
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iNWSdf_9bmE?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
 
+The aircraft is wrapped around the edges in x and y direction, until it reaches an altitude below 4.000ft. Below 4.000ft A lock-on camera  is used to follow the aircraft.
 For debugging purposes, the [arcade physics debug  plugin](https://github.com/samme/phaser-plugin-debug-arcade-physics) is used. This plugin displays velocity and acceleration vectors of any physics body in Phaser, which is extremely useful when inspecting flight variables. 
  
 ![ISA]({{ site.url }}/scrambledev/assets/images/screenshots/PART1.png)
