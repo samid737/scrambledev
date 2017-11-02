@@ -82,13 +82,13 @@ Arcade Physics collision detection is therefore sufficient. The more advanced [P
 
 ## World setup
 
-Scramble JS will be viewed from the side view and the world is 2D, similar to UN Squadron for the SNES **(CLICK IMAGE FOR VIDEO)**:
+The game is in side view and the world is 2D, similar to UN Squadron for the SNES **(CLICK IMAGE FOR VIDEO)**:
 
 [![CLICK FOR VIDEO]({{ site.url }}/scrambledev/assets/images/UN.png)](https://www.youtube.com/watch?v=-C6V_bEmOEQ&t=608s)
 
-The frame of refence is pretty tricky to implement. In UN Squadron, the player can move around, but is bounded by the viewport and all objects are moving towards the player. This works fine for arcade/action gameplay, but for flight simulation, it will make less sense. The game world is simulated using real world dimensions (everything is in SI units) and the level of action is not like in UN Squadron. 
+In UN Squadron, the player can move around, but is bounded by the viewport and all scenery objects are moving towards the player. This works fine for arcade/action gameplay, but for flight simulation, it will make less sense. The game world is simulated using real world dimensions (everything is in SI units) and the level of action is not like in UN Squadron. 
 
-The player can move around freely inside A simulated 2D world. In Phaser, you can set the size of your game world using A function called setBounds(). A simulated world is setup by adjusting the world size to some  large (but not infinite) size. Since combat aircraft fly below the  [stratosphere](http://www.online-sciences.com/wp-content/uploads/2014/09/stratosphere-layer-11.jpg),  the height of the world will be less than the height of the stratosphere [ Assumption](#). I still have to think about A solution for the width of the world. It may be fixed, but could also vary with each mission.
+The player will be able to move around freely inside A simulated 2D world. In Phaser, you can set the size of your game world using A function called setBounds(). A simulated world is setup by adjusting the world size to some  large (but not infinite) size. Since combat aircraft fly below the  [stratosphere](http://www.online-sciences.com/wp-content/uploads/2014/09/stratosphere-layer-11.jpg),  the height of the world will be less than the height of the stratosphere [ Assumption](#). I still have to think about A solution for the width of the world. It may be fixed, but could also vary with each mission.
 
 You can also let the main camera follow the player. The main camera follows the player only when it is in the vicinity of any scenery object. When there is no action, it will not follow the player, but the world position of the aircraft is still tracked. To illustrate:
 
@@ -96,13 +96,7 @@ TODO
 
 ## Result
 
-At this point there is nothing exciting going on (yet),  just an aircraft assembled and A sky gradient. For debugging purposes, the [arcade physics debug  plugin](https://github.com/samme/phaser-plugin-debug-arcade-physics) is used. This plugin displays velocity and acceleration vectors of any physics body in Phaser, which is extremely useful when inspecting variables.
-
-![ISA]({{ site.url }}/scrambledev/assets/images/screenshots/PART1.png)
-
-The circle around the body displays the speed (magnitude of velocity) nicely. I have also added some custom lines using [Phaser Geometry](https://phaser.io/examples/v2/category/geometry) to display normal acceleration (green), lift force, drag force, because i'm pretty sure this will be useful later on. 
-
-At this point I added basic keyboard cursor input just to goof around. The flight realism is nowhere to be found yet. Right  now you can freely move around, kind of like [this](//examples.phaser.io/embed.php?f=weapon/asteroids.js) example:
+At this point there is nothing exciting going on (yet),  just an aircraft assembled as A sprite and A simple background. I added basic keyboard cursor input just to goof around, but there is not much to demonstrate and the flight physics is nowhere to be found. Right  now you can freely move around, kind of like [this](//examples.phaser.io/embed.php?f=weapon/asteroids.js) example: 
 
 {% raw %}
 
@@ -113,6 +107,6 @@ At this point I added basic keyboard cursor input just to goof around. The fligh
 
 ## What's next
 
-The next question is: How to add the word flight to the current model?  The answer is found in [Development part 2: Modeling EOM](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html).
+The next question is: How to add some real flight physics to the current model?  The answer is found in [Development part 2: Modeling EOM](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html).
 
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*
