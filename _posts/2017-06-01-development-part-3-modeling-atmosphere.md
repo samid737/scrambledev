@@ -9,7 +9,7 @@ The accuracy of the flight model depends on the atmosphere model. The ISA standa
 
 ![ISA]({{ site.url }}/scrambledev/assets/images/ISA.png)
 
-## Equations
+## Analysis
 
 For altitudes up to 11km the following formulas are used:
 

@@ -9,7 +9,7 @@ In [Development part 1](/scrambledev/2017/03/01/progress-part-1-flight-mechanics
 
 Normally when working on A flight simulator, you consider motion in three dimensions. There are quite alot of resources and even [example projects](https://www.google.nl/search?q=flight+simulator+github) available that implement flight in three dimensions. However, these rely on A particular set of assumptions. The problem in my case is that my assumptions differ from the reference material. The good news however lies in the number two of 2D, I can bypass an entire dimension...
 
-## Equations of motion (EOM)
+## Equations of motion (EOM) analysis
 
 To upgrade the current model, the aircraft is in need of some equations of motion.There are A view fundemental equations I applied to determine the motion of the aircraft and the main source  is the [Flight and Orbital Mechanics](https://ocw.tudelft.nl/courses/flight-orbital-mechanics/) course I took, given  by Dr. ir. M. Voskuijl. Basically this course deals with the mechanics involved during every phase of flight (take-off, climb, cruise, descent, landing) and the nice part is that complete derivations are  included for 2D longitudinal flight!
 
@@ -109,7 +109,7 @@ The centre of gravity of the aircraft is assumed to be fixed along the longitudi
 
 ![ROT]({{ site.url }}/scrambledev/assets/images/ROT.png)
 
-In this case, $$\boldsymbol{\beta=\alpha}$$. The centre of gravity lies A bit in front (exaggerated above) and the lift and drag force introduce torque. Therefore:
+In this case, $$\boldsymbol{\beta=\alpha}$$. The centre of gravity lies A bit in front (exaggerated above for illustrative purposes) and the lift and drag force introduce torque. Therefore:
 
 {% raw %}
 $$\boldsymbol{ \tau = r \sin{\alpha} D + r \cos{\alpha} L }$$
@@ -222,7 +222,7 @@ The circle around the body displays the speed (magnitude of velocity) nicely. I 
 
 ## What's next
 
-Notice how it tumbles nose down,  as expected from  the diagram shown earlier, but gradually settles to a vertical nose down (the equilibrium state) . There is no absolutely no way to control the aircraft. The reason being one very important missing piece, key to longitudinal aircraft dynamics: A tail. Read more about this in [Development part 3: Stability and control](/scrambledev/2017/05/01/development-part-4-modeling-thrust-basic-control.html).
+Notice how it tumbles nose down,  as expected from  the diagram shown earlier, but gradually settles to a vertical dive. There is absolutely no way to control the aircraft. The reason being one very important missing piece, key to longitudinal aircraft dynamics: A tail. Read more about this in [Development part 3: Stability and control](/scrambledev/2017/05/01/development-part-4-modeling-thrust-basic-control.html).
 
 
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*
