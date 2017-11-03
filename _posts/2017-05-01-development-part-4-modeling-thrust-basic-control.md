@@ -77,7 +77,7 @@ TODO.
 
 The stabilator is limited to 15 degree positive, 7 degree negative deflection. The aircraft is extremely sensitive to input, since there is nothing that limits deflection rate. The aircraft can be exposed to destructive G loads (22g's measured) at high speed. A pitch limiter needs to be implemented.
 
-Pitching moments, lift forces and arms are displayed during simulation. Dat.gui is used to inspect and change parameters during simulation. 
+Pitching moments, lift forces and arms are displayed during simulation. [Dat.gui](https://github.com/dataarts/dat.gui) is used to inspect and change parameters during simulation. 
 
 ## What's next
 
