@@ -3,7 +3,7 @@ title: 'Features part 1: Landing gear, Runway, Take-off/landing'
 layout: post
 ---
 
-Two major features where added in the past two weeks, which finally allows for take-off and landing. Landing succesfully is pretty challenging though!
+Two major features were added over the past two weeks. Take-off and landing is now fully featured. Landing succesfully is pretty challenging though!
 
 ## Landing gear
 
@@ -22,7 +22,7 @@ This is the second sprite with A physics body attached to it. The sprite positio
 
 ![GRD](https://simplescientist.files.wordpress.com/2010/10/airplane1.png)
 
-Take-off and landing occurs when the aircraft is on the ground (the ground phase) and basically add an extra drag component  $$D_g$$ to the total drag force. The amount of friction varies as:
+Take-off and landing occurs when the aircraft is on the ground (the ground phase) and basically add an extra drag component  $$D_g$$ to the [equations of motion](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html):
 
 $$D_g= \mu N + D_p$$
 

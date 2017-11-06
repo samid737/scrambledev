@@ -31,7 +31,7 @@ Reconsidering the moments involved after adding the HSTAB:
 
 ##### Note that  the CG is centered this time. To simplify the illustration, drag forces are not included.
 
-Notice that in this case the EOM are just superimposed:
+Notice that in this case the EOM are superpositioned:
 
 {% raw %}
 $$\boldsymbol{ \tau_{total} =  \tau_{w}+  \tau_{t} =r_w \sin{\alpha} D + r_w \cos{\alpha} L +r_t \sin{\alpha_t} D_t + r_t \cos{\alpha_t} L_t }$$

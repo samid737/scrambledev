@@ -18,10 +18,10 @@ $$\boldsymbol{T= T_0 - 6.5 \frac{h}{1000}}$$\\
 \\
 $$\boldsymbol{P= P_0  (\frac{T}{T_0})^{5.2561}}$$\\
 \\
-where $$\boldsymbol{T}$$ is the Temperature at altitude $$\boldsymbol{h}$$, $$\boldsymbol{T_0}$$ A reference temperature (Sea level), $$\boldsymbol{P_0}$$ A reference pressure (Sea level).
+where $$\boldsymbol{T}$$ is the Temperature $$\boldsymbol{P}$$ the pressure at altitude $$\boldsymbol{h}$$, $$\boldsymbol{T_0}$$ A reference temperature (Sea level), $$\boldsymbol{P_0}$$ A reference pressure (Sea level).
 {%endraw%}
 
-For altitudes up to 20km, isothermal conditions exist and the pressure formula is slightly different. Then above 20km the same relation as above holds for $$\boldsymbol{P}$$ and $$\boldsymbol{T}$$, except for the increase in temperature.
+For altitudes up to 20km, isothermal conditions exist and the pressure formula is slightly different. Then above 20km the same relation as above holds for $$\boldsymbol{P}$$ and $$\boldsymbol{T}$$, except this time there is an increase in temperature.
 
 The air density can be determined from the ideal gas law:
 
@@ -45,11 +45,10 @@ The formulas are directly applied and computed every 0.25 seconds to avoid unnec
 
 ## Result
 
-Thrust, lift and drag forces are much more accurate. You can really notice thrust loss at high altitudes. 
+Thrust, lift and drag forces are much more accurate. You can really notice thrust loss at high altitudes. The aircraft ceiling is definitely observable as it is almost impossible to reach altitudes above 70.000ft. The MIG-21 its ceiling is close to 60.000ft. Stall characteristics also seem to have improved.
 
 ## What's next
 
 local atmospheric conditions are yet to be implemented. Wind is yet to be implemented. Weather is yet to be implemented.
-
 
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*

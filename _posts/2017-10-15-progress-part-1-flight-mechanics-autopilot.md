@@ -3,15 +3,15 @@ title: 'Features part 2: Head up display, Secondary flight controls'
 layout: post
 ---
 
-Last week I worked on two features.
+Last week I added two features that evolved pretty much out of necessity. The Head Up display (HUD) conveniently displays all the flight data instead of having to rely on numbers from A debug display. The secondary flight controls were needed for low speed flight. 
 
 ##  Head up display (HUD).
 
 ![display]({{ site.url }}/scrambledev/assets/images/screenshots/HUD1.png)
 ##### note that the text in white is used for debugging and is not part of the HUD.
-The HUD is pretty similar to the one used in [Aero Elite Combat academy](https://i.ytimg.com/vi/bBFGRPCQngE/maxresdefault.jpg), A minimalistic HUD. It provides all the essential flight information for combat aircraft flight, leaving out all the flight systems that can [fill](https://i.ytimg.com/vi/1UrF6bmwe_E/maxresdefault.jpg) up the entire display field. The sim is in 2D in longitudinal direction, therefore heading display is removed and the pitch ladder is locked to pitch motion.
+The HUD is pretty similar to the one used in [Aero Elite Combat academy](https://i.ytimg.com/vi/bBFGRPCQngE/maxresdefault.jpg), A minimalistic HUD. It provides all the essential flight data for combat aircraft flight, leaving out all the flight systems that can [fill](https://i.ytimg.com/vi/1UrF6bmwe_E/maxresdefault.jpg) up the entire display field. The sim is in 2D in longitudinal direction, therefore heading display is removed and the pitch ladder is locked to pitch motion.
 
-Flight info included:
+Flight Data included:
 
 * Pitch
 * True airspeed
