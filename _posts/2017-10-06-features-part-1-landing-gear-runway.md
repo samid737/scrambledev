@@ -1,9 +1,9 @@
 ---
-title: 'Features part 1: Landing gear, Runway, Take-off/landing'
+title: Landing gear, Runway, Take-off/landing
 layout: post
 ---
 
-Two major features were added over the past two weeks. Take-off and landing is now fully featured. Landing succesfully is pretty challenging though!
+Two major features were added over the past two weeks. Take-off and landing is now possible. Landing succesfully is pretty challenging though!
 
 ## Landing gear
 

@@ -1,5 +1,5 @@
 ---
-title: 'Development part 4: Modeling the atmosphere'
+title: 'Modeling part 4: Atmosphere'
 layout: post
 ---
 

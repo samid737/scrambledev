@@ -1,11 +1,11 @@
 ---
-title: 'Development part 3: Stability and control'
+title: 'Modeling part 3: Stability and control'
 layout: post
 ---
 
 *Please not that these features where implemented in the early stage, prior to  logging the progress.*
 
-In [Development part 2](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html), equations of motions are added to the aircraft model. In the current state, the aircraft is modelled as A giant (and heavy) symmetrical flying wing. The [B2-Spirit](https://qph.ec.quoracdn.net/main-qimg-fc219e6b7e82d997d715af545eecdbc9-c) is designed in A similar way and it is aerodynamically unstable, constant relying on adjustments from flight control computers. Most aircraft need an extra mechanism for longitudinal stability. Adding A [horizontal stabilizer/tail](https://www.grc.nasa.gov/www/k-12/airplane/Images/elv.gif) is A conventional way to add longitudinal stability and control.
+In [Modeling  part 2](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html), equations of motions are added to the aircraft model. In the current state, the aircraft is modelled as A giant (and heavy) symmetrical flying wing. The [B2-Spirit](https://qph.ec.quoracdn.net/main-qimg-fc219e6b7e82d997d715af545eecdbc9-c) is designed in A similar way and it is aerodynamically unstable, constant relying on adjustments from flight control computers. Most aircraft need an extra mechanism for longitudinal stability. Adding A [horizontal stabilizer/tail](https://www.grc.nasa.gov/www/k-12/airplane/Images/elv.gif) is A conventional way to add longitudinal stability and control.
 
 ## Longitudinal stability
 
@@ -90,4 +90,4 @@ At this point, controlled flight is achieved.
 ![succes](http://weknowmemes.com/generator/uploads/generated/g1406897962820158167.jpg)
 
 
-Some possible improvements in flight control: trimming, damping, adding flaps, speedbrakes. The atmosphere is currently assumed to be A linear model, which is not true in reality. More about this in [Development part 4: Modeling the atmosphere](/scrambledev/2017/06/01/development-part-3-modeling-atmosphere).
+Some possible improvements in flight control: trimming, damping, adding flaps, speedbrakes. The atmosphere is currently assumed to be A linear model, which is not true in reality. More about this in [Modeling  part 4: Modeling the atmosphere](/scrambledev/2017/06/01/development-part-3-modeling-atmosphere).

@@ -1,11 +1,11 @@
 ---
-title: 'Development part 2: Modeling EOM'
+title: 'Modeling part 2: Equations of motion'
 layout: post
 ---
 
 *Please not that these features where implemented in the early stage, prior to  logging the progress.*
 
-In [Development part 1](/scrambledev/2017/03/01/progress-part-1-flight-mechanics-physics-system-world-setup.html), the aircraft is properly configured so that it exists in Phaser, armed with A physics body. The flight physics can be implemented at this stage.
+In [Modeling part 1](/scrambledev/2017/03/01/progress-part-1-flight-mechanics-physics-system-world-setup.html), the aircraft is properly configured so that it exists in Phaser, armed with A physics body. The flight physics can be implemented at this stage.
 
 Normally when working on A flight simulator, you consider motion in three dimensions. There are quite alot of resources and even [example projects](https://www.google.nl/search?q=flight+simulator+github) available that implement flight in three dimensions. However, these rely on A particular set of assumptions. The problem in my case is that my assumptions differ from the reference material. The good news however lies in the number two of 2D, I can bypass an entire dimension...
 
@@ -222,7 +222,7 @@ The circle around the body displays the speed (magnitude of velocity) nicely. I 
 
 ## What's next
 
-Notice how it tumbles nose down,  as expected from  the diagram shown earlier, but gradually settles to a vertical dive. There is absolutely no way to control the aircraft. The reason being one very important missing piece, key to longitudinal aircraft dynamics: A tail. Read more about this in [Development part 3: Stability and control](/scrambledev/2017/05/01/development-part-4-modeling-thrust-basic-control.html).
+Notice how it tumbles nose down,  as expected from  the diagram shown earlier, but gradually settles to a vertical dive. There is absolutely no way to control the aircraft. The reason being one very important missing piece, key to longitudinal aircraft dynamics: A tail. Read more about this in [Modeling  part 3: Stability and control](/scrambledev/2017/05/01/development-part-4-modeling-thrust-basic-control.html).
 
 
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*

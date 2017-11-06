@@ -1,5 +1,5 @@
 ---
-title: 'Development part 1: Modeling Aircraft, physics system, world.'
+title: 'Modeling part 1: Aircraft, physics system, world.'
 layout: post
 ---
 

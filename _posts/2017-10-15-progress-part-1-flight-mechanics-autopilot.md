@@ -1,5 +1,5 @@
 ---
-title: 'Features part 2: Head up display, Secondary flight controls'
+title: Head up display, Secondary flight controls
 layout: post
 ---
 
