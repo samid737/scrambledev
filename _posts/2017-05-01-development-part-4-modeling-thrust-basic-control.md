@@ -71,11 +71,15 @@ The stabilator of the MIG-21 is modeled and the airfoil is considered thin, symm
 
 ## Result
 
-It was A pretty tedious, aggrevating, time consuming job to get the flight model to work, but the result is awesome:
+It was A pretty tedious,maybe  A bit aggrevating task to get the model to work . A big lesson learned is to keep track of sign conventions, because sign errors quickly accumulate and debugging will be like finding A needle in the haystack. The result is awesome: 
 
 TODO.
 
-The stabilator is limited to 15 degree positive, 7 degree negative deflection. The aircraft is extremely sensitive to input, since there is nothing that limits deflection rate. The aircraft can be exposed to destructive G loads (22g's measured) at high speed. A pitch limiter needs to be implemented.
+The stabilator is limited to 15 degree positive, 7 degree negative deflection:
+
+![stabilator](http://g.recordit.co/ntLlUQ1Nh9.gif).
+
+The aircraft is extremely sensitive to input, since there is nothing that limits deflection rate. As A result, the aircraft can be exposed to destructive G loads (>22g's) at high speed. A pitch limiter needs to be implemented to safeguard the aircraft (who cares about the pilot right?).
 
 Pitching moments, lift forces and arms are displayed during simulation. [Dat.gui](https://github.com/dataarts/dat.gui) is used to inspect and change parameters during simulation. 
 
