@@ -5,6 +5,8 @@ layout: post
 
 Two major features were added over the past two weeks. Take-off and landing is now possible. Landing succesfully is pretty challenging though!
 
+*All details are found in the [changelog](/scrambledev/2017/10/01/changelog.html).*
+
 ## Landing gear
 
 ![LDG](http://g.recordit.co/QuXCkTxsmn.gif)

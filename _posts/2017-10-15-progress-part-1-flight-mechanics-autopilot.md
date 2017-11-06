@@ -5,6 +5,8 @@ layout: post
 
 Last week I added two features that evolved pretty much out of necessity. The Head Up display (HUD) conveniently displays all the flight data instead of having to rely on numbers from A debug display. The secondary flight controls were needed for low speed flight. 
 
+*All details are found in the [changelog](/scrambledev/2017/10/01/changelog.html).*
+
 ##  Head up display (HUD).
 
 ![display]({{ site.url }}/scrambledev/assets/images/screenshots/HUD1.png)
