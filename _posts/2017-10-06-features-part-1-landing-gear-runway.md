@@ -49,4 +49,18 @@ function checkimpact() {
 }
 ```
 
-To demonstrate, A full take-off and landing run:
+## Mission
+
+The Landing gear and Runway are demonstrated.
+
+### Briefing
+
+The mission will start at zero altitude, standard day, mean sea level. Take-off then immediately climb out A bit,  approach the runway and land. The manoeuvre:
+
+![m00]({{ site.url }}/scrambledev/assets/images/manouvres/00.png)
+
+### Flight
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Pv8SjE7s0yw?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
+
+The trajectory is displayed in the middle. At this point there is no flight data display at all.  also notice that it took some time toreach landing gear extension speed and the landing roll also took some time.

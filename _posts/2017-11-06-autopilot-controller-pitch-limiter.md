@@ -14,7 +14,7 @@ The Autopilot currently supports two modes:
 - speed hold/autothrottle
 - altitude hold
 
-For both cases, A [PID controller](https://www.npmjs.com/package/node-pid-controller) is implemented. [Here](http://www.flightgear.org/Docs/XMLAutopilot/node2.html) is a nice read on how A PID is used in autpilot systems.
+For both cases, A [PID controller](https://www.npmjs.com/package/node-pid-controller) is implemented. [Here](http://www.flightgear.org/Docs/XMLAutopilot/node2.html) is a nice read on how A PID is used in autpilot systems, it definitely helped me out.
 
 Just like most autopilots, there is A master hold switch and individiual hold switch. The GUI is not yet implemented, everything is in [dat.gui](http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage). The autopilot altitude hold still needs to be fine tuned by ajdusting the gains, but it will eventually hold at near reference altitude (there is some total error).
 

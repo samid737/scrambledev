@@ -64,3 +64,20 @@ if(flapSetting ==2){
 [Airbrakes](http://c8.alamy.com/comp/D4RX54/a-serbian-air-force-mig-21um-jet-fighter-with-air-brakes-in-flight-D4RX54.jpg) are necessary to slow down the aircraft and are also iplemented. They basically increase overall drag. Similar to how the flaps increase the CL value, deploying airbrakes will add some predefined constant to the drag coefficient of the aircraft.
 
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*
+
+## Mission
+
+The HUD is demonstrated. 
+
+### briefing
+
+The initial altitude 10.000ft, speed 450KTS TAS, accelerate and climb vertically up to 20.000ft , reverse immelman back down  again and dive vertically, leveling of at 10.000ft:
+
+![m01]({{ site.url }}/scrambledev/assets/images/manouvres/01.png)
+
+### Flight
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o-CQACvYAVY?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
+
+Notice how full stabilator deflection causes the screen to flash red. This is A structural damage alert. A Stall warning will make the screen shake.A damage model is yet to be implemented. The stabilator is normally extremely sensitive to input, the deflection limits were reduced for the purpose of this demonstration.
+The aircraft can be flipped in an instant by pressing the D key, to simulate 180 degree [aileron roll](http://www.fokkerfour.nl/aktiviteiten/aerobatics/images/roll.gif).Pilot blackout and redout is simulated aswell (No G-LOC yet though).
