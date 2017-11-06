@@ -3,7 +3,7 @@ title: 'Development part 1: Modeling Aircraft, physics system, world.'
 layout: post
 ---
 
-*Please not that these features where implemented in the early stage, prior to  logging the progress.  Not all details are included.*
+*Please not that these features where implemented in the early stage, prior to  logging the progress.*
 
 The first objective is to model the aircraft so that it can exist inside the game engine. This way there will be at least one object to play around with. Then the phyiscs system must be considered . The simulated world must be propertly configured for the simulation to work.
 

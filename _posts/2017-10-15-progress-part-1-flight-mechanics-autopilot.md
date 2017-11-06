@@ -1,9 +1,9 @@
 ---
-title: 'Features part 1: Head up display, Secondary flight controls'
+title: 'Features part 2: Head up display, Secondary flight controls'
 layout: post
 ---
 
-Last week I worked on two features that are crucial during flight:
+Last week I worked on two features.
 
 ##  Head up display (HUD).
 
@@ -29,10 +29,15 @@ Flight info included:
 ##  Secondary flight controls.
 
 ### High lift devices
-I played around and tried to land and take-off with the current state of the flight model and I was quickly able to confirm the difficulties that arise with low-speed flight for high speed aircraft This also proved the flight model has a pretty high level of accuracy. The angle of attack can increase to A critical angle when lowering speed at A steady (low) altitude, resulting in stalled flight. Without high lift devices, there is no mechanism to deal with such critical angle of attack. The player must be able to Take off and land, so it was necessary to consider high lift devices.  
+I played around and tried to take-off and land and I was quickly able to confirm the difficulties that arise with low-speed flight for high speed aircraft (especially with delta wings). This also proved the flight model has a pretty high level of accuracy. The angle of attack can increase to A critical angle when lowering speed at A steady (low) altitude, resulting in stalled flight. Without high lift devices, there is no mechanism to deal with such critical angle of attack. The player must be able to Take off and land, so it was necessary to consider high lift devices.  
+
 Flaps will be the available as A high lift device. Flaps will influence the lift coefficient by increasing it at the same angle of attack .  This will allow the user deal with low-speeds well within angle of attack margins. [This](https://ieeenitk.org/blog/High-Lift-devices/) article explains it briefly. 
 
-The aircraft is assumed to have two flap settings, with two coefficients that will be added to the lift coefficient whenever flaps are deployed. The pseudocode:
+The aircraft is assumed to have two flap settings, with two coefficients that will be added to the lift coefficient whenever flaps are deployed. 
+
+![flaps](http://g.recordit.co/NWY9V3TKe9.gif)
+
+The pseudocode:
 
 ```
 //in aircraft setup:

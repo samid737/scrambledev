@@ -3,7 +3,7 @@ title: 'Development part 2: Modeling EOM'
 layout: post
 ---
 
-*Please not that these features where implemented in the early stage, prior to  logging the progress.  Not all details are included.*
+*Please not that these features where implemented in the early stage, prior to  logging the progress.*
 
 In [Development part 1](/scrambledev/2017/03/01/progress-part-1-flight-mechanics-physics-system-world-setup.html), the aircraft is properly configured so that it exists in Phaser, armed with A physics body. The flight physics can be implemented at this stage.
 
