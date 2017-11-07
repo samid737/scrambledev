@@ -18,10 +18,6 @@ For both cases, A [PID controller](https://www.npmjs.com/package/node-pid-contro
 
 Just like most autopilots, there is A master hold switch and individiual hold switch. The GUI is not yet implemented, everything is in [dat.gui](http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage). The autopilot altitude hold still needs to be fine tuned by ajdusting the gains, but it will eventually hold at near reference altitude (there is some total error).
 
-A demonstration:
-
-TODO
-
 ## Pitch limiter
 
 The pitch limiter is an inverse proportional controller. It reduces the actual elevator deflection with increase in load factor and uses the ultimate design load factor as A reference value. 
@@ -34,6 +30,15 @@ myAircraft.limiter = 1 / (myAircraft.limiterGain * x + 0.1);
 myAircraft.elevator.angle = pitchValue * 15 * myAircraft.direction * myAircraft.limiter;
 ```
 
-A demonstration without pitch limiter and with pitch limiting:
+## Mission
+The autopilot is demonstrated.
 
-TODO
+### Briefing
+
+Initial altitude 10.000ft, 450 KTAS. Autopilot master switch is enabled during start. Hold is set at 15.000ft , 450KTAS.
+
+### Flight
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tRIJSTOKwGg?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
+
+Notice how the autopilot is currently off by A couple of hundred feet. The autopilot still needs some fine tuning. Speed is controlled only by adjusting throttle, hence there is no way to actually slow down the aircraft if the speed is too high.
