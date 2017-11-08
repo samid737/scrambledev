@@ -3,7 +3,7 @@ title: Autopilot controller, pitch limiter
 layout: post
 ---
 
-Last week  was mostly spent on writing aboutthe  early stage developments (starting  [here](/scrambledev/2017/03/01/progress-part-1-flight-mechanics-physics-system-world-setup.html)), so it  was kind of A recap on everything I've done so far.  I want the updates to be helpful to readers so I try  to take my time writing each part. This is why there is A noticeable gap in the post timeline.
+Last week  was mostly spent on writing about the  early stage developments (starting  [here](/scrambledev/2017/03/01/progress-part-1-flight-mechanics-physics-system-world-setup.html)), so it  was kind of A recap on everything I've done so far.  I want the updates to be helpful to readers so I try  to take my time writing each part. This is why there is A noticeable gap in the post timeline.
 
 Adding an autopilot was not on the list of features at first.  While analysing and endlessly recalibrating the aircraft in its stability (read more in [Modeling part 3: Stability and Control](/scrambledev/2017/05/01/development-part-4-modeling-thrust-basic-control.html)) I figured that having an autopilot would help out substantially. In [part 3](/scrambledev/2017/05/01/development-part-4-modeling-thrust-basic-control.html) I also mentioned the control output to be dangerously sensitive, providing immediate response and ignoring the airframe and pilot limits. This makes it harder to properly calibrate the aircraft. The pitch limiter solves this problem.
 

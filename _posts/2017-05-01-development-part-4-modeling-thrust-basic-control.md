@@ -21,7 +21,7 @@ If the aircraft is currently launched horizontally forward at an altitude of 20.
 
 ### Horizontal stabilizer (HSTAB)
 
-If the result from [part 2](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html) is A flying wing, then applying the exact same equations using smaller dimensions will lead to A smaller flying wing. Therefore, using the exact same procedure, A HSTAB is added to the current model and its location is behind the CG.
+If the result from [part 2](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html) is A flying wing, then applying the exact same equations using smaller dimensions will lead to A smaller flying wing. With the exact same procedure, A HSTAB is added to the current model and its location is behind the CG.
 
 ### Analysis
 
@@ -39,7 +39,7 @@ $$\boldsymbol{ \tau_{total} =  \tau_{w}+  \tau_{t} =r_w \sin{\alpha} D + r_w \co
 
 where subscript $$w$$ is the wing contribution and $$t$$ is the tail/HSTAB contribution . 
 
-The extra term $$\boldsymbol{ \tau_t} $$ allows control over pitching moment.From the diagram notice that, $$\boldsymbol{r}$$, the arms determine the magnitude and sign of $$\boldsymbol{\tau_{total}}$$ as do  $$\boldsymbol{L_w}$$ and $$\boldsymbol{L_t}$$. $$\boldsymbol{r}$$ is assumed fixed during flight ([Assumption]()). The configuration of $$\boldsymbol{r}$$ and the aerodynamics of the wing and tail will determine the stability of the aircraft. 
+The extra term $$\boldsymbol{ \tau_t} $$ allows control of pitching moment.From the diagram notice that, $$\boldsymbol{r}$$, the arms determine the magnitude and sign of $$\boldsymbol{\tau_{total}}$$ as do  $$\boldsymbol{L_w}$$ and $$\boldsymbol{L_t}$$. $$\boldsymbol{r}$$ is assumed fixed during flight ([Assumption]()). The configuration of $$\boldsymbol{r}$$ and the aerodynamics of the wing and tail will determine the stability of the aircraft. 
 
 ## Longitudinal Control
 
