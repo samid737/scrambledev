@@ -1,35 +1,76 @@
 
 # TODO:
 
-- Auto pilot gain tuning.
-- supersonic drag
-
-- Stall behaviour, vstall.
-
-- Speedbrake stuck after crash
-- Correct fuel burn
-- Thrust model.
-- Mach 2 check.
-- SI altitude
+- add ground friction force.
+- pitch limiter controller gain tuning.
+- auto pilot controller gain tuning, integral gain weak.
+- %reversed flight bug.
+- %landing rolling bug
+- %Speedbrake stuck after crash
+- %Display reset UR corner
+- %display not resetting R
 - IAS,TAS,EAS
-
 
 - Moving scenery (relative positioning/reference frame).
 - World building.
 
 - Weather, snow, rain, heat/desert.
 - Day night cycle.
-- List of assumptions
-
 - performance optimization
 - refactor constants
+- List of assumptions
+
+# 12-11-2017
+
+## Features:
+
+- structural damage indicator
+- full power thrust sound
+- idle thrust sound.
+- recalibrate thrust/drag model, compressibility.
+
+## Bug fixes:
+
+# 26-10-2017
+
+## Features:
+
+- added cg debugging
+- compressibility effect added using compressible Bernoulli equation.
+- delta wing lift & drag model using Polhamus equation (low speed).
+
+## Bug fixes:
+
+- stability derivatives values, CG locations corrected.
+
+# 20-10-2017
+
+## Features:
+
+- improved thrust model. velocity and altitude.
+- supersonic drag polar
+
+## Bug fixes:
+
+- world scale (x vs y disproportional).
+
+# 19-10-2017
+
+## Features:
+
+- pitch limiter.
+- Autothrottle
+
+## Bug fixes:
+
+- Correct fuel burn.
+- Stall behaviour, vstall.
 
 # 18-10-2017
 
 ## Features:
 
 - Control damping, improve flight model.
-
 - Autothrottle
 
 ## Bug fixes:
@@ -89,7 +130,6 @@
 
 # 6-10-2017:
 
-
 ## Features:
 
 - added weight parameters, operating limit parameters.
@@ -110,4 +150,3 @@
 ## Bug fixes:
 
 - EOM, flight mechanics stable.
--
