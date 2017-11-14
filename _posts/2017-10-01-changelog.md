@@ -5,11 +5,9 @@ layout: post
 
 Detailed log starting 1 Oct.
 
-
 # TODO:
 
 - add ground friction force.
-- recalibrate thrust/drag model, compressibility.
 - pitch limiter controller gain tuning.
 - auto pilot controller gain tuning, integral gain weak.
 - %reversed flight bug.
@@ -28,6 +26,18 @@ Detailed log starting 1 Oct.
 - refactor constants
 - List of assumptions
 
+# 12-11-2017
+
+## Features:
+
+- structural damage indicator
+- full power thrust sound
+- idle thrust sound.
+- recalibrate thrust/drag model, compressibility.
+
+## Bug fixes:
+
+
 # 26-10-2017
 
 ## Features:
@@ -35,7 +45,6 @@ Detailed log starting 1 Oct.
 - added cg debugging
 - compressibility effect added using compressible Bernoulli equation.
 - delta wing lift & drag model using Polhamus equation (low speed).
-- idle thrust sound.
 
 ## Bug fixes:
 
@@ -57,13 +66,11 @@ Detailed log starting 1 Oct.
 ## Features:
 
 - pitch limiter.
-- engine sound effects
 - Autothrottle
 
 ## Bug fixes:
 
-- Mach 2 check.
-- Correct fuel burn
+- Correct fuel burn.
 - Stall behaviour, vstall.
 
 # 18-10-2017
@@ -129,7 +136,6 @@ Detailed log starting 1 Oct.
 - Air brake drag coefficient effect.
 
 # 6-10-2017:
-
 
 ## Features:
 

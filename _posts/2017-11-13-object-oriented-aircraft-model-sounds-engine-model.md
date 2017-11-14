@@ -34,7 +34,7 @@ This variation is modeled as A piecewise linear function:
 
 ###### the above is not the actual model, just to illustrate.
 
-## Object oriented thinking
+## Object oriented code
 
 This was probably the most exciting improvement, which was on my [TODO](/scrambledev/2017/10/01/changelog.html) list for quite some time now. The code was previously not focused on reusable, extensible object oriented code. There was one aircraft class, with some key attributes, but most of the code consisted of seperate globally accessible functions.  Changing this turned out to be major, why? I urge you to check out the demonstration below to find out.
 
@@ -43,14 +43,17 @@ This was probably the most exciting improvement, which was on my [TODO](/scrambl
 Just to fool around A bit, I made some custom aircraft sound effects. Different engine sounds are added and their volumes are adjusted to match the engine thrust setting. No pitch adjustments unfortunately....not yet at least. Idle sounds, full power, afterburner thrust are added. A nice [soundtrack](https://www.youtube.com/watch?v=L9epcjTej7E) is also added to the video below just to spice things up (THIS WILL NOT ADDED TO THE GAME). A stall warning beep sound is also added.
 
 ## Mission
+
+Progress is demonstrated.
+
 ### Briefing
 
-Initial altitude 30.000ft, speed 350KTS. The objective is to follow your wingman:
+![m01]({{ site.url }}/scrambledev/assets/images/manouvres/02.png)
+
+Initial altitude 30.000ft, speed 350KTS. The flight leader is flying with you, so try to keep up with your leader. Finally, break away.
 
 ### Flight
 
-TODO
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WTg3_xKTTW0?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
 
-### Result
-
-TODO
+Forget about my piloting skills for now, but as you can see, restructuring to object oriented code allows you to add more aircraft! Pretty neat  right?! The second aircraft is completely autonomous and has the autopilot engaged. However, it lacks A pilot (AI), so it cannot fly without an autopilot. I also decided to change the camera tracking logic to always track the player.
