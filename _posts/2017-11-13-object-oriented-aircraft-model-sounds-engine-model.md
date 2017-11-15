@@ -1,9 +1,9 @@
 ---
-title: Object oriented approach, sounds, supersonics
+title: Supersonics,Object Oriented approach, sounds,
 layout: post
 ---
 
-I am super excited with the outcome of last week. Though the features are small and I spent most of my time on improvements, the demonstration below perfectly demonstrates the usefulness of some of my last weeks effort.
+I am super excited with the outcome of last week. Although the features are less spectacular and most of the development time was spent on improvements, the demonstration below shows that it was the improvements are definitely valuable.
 
 *All updates are found in the [changelog](/scrambledev/2017/10/01/changelog.html).*
 
@@ -14,7 +14,7 @@ The engine model, but also some assumptions  are to blaim for this. The details 
 
 ### Engine model revisited
 
-About 80% of last weeks development time was spent on revisiting and re-engineering the current thrust model. The first improvement incorperates speed into the current engine model.  With higher speeds , the engine mass flow increases, which could benefit the [thrust](https://www.grc.nasa.gov/www/k-12/airplane/thrsteq.html), but the intake vs exhaust velocity delta decreases.  The thrust model now incorperates the Mach number as A parameter for higher accuracy. 
+About 80% of last weeks development time was spent on revisiting and re-engineering the current engine model. The first improvement incorperates speed into the current engine model.  With higher speeds , the engine mass flow increases, which could benefit the [thrust](https://www.grc.nasa.gov/www/k-12/airplane/thrsteq.html), but the intake vs exhaust velocity delta decreases.  The thrust model now incorperates the Mach number as A parameter for A more accurate engine model. 
 
 The majority of time though was spent on researching A more sophisticated turbojet model using [this](https://web.stanford.edu/~cantwell/AA283_Course_Material/AA283_Course_Notes/AA283_Aircraft_and_Rocket_Propulsion_Ch_04_BJ_Cantwell.pdf) source as A reference. The model does seem to work, but more research is needed to succesfully incorporate it. I had to draw the line with the current model, otherwise I would spend too much time on R&D. If it works, it works. 
 
@@ -36,7 +36,7 @@ This variation is modeled as A piecewise linear function:
 
 ## Object oriented code
 
-This was probably the most exciting improvement, which was on my [TODO](/scrambledev/2017/10/01/changelog.html) list for quite some time now. The code was previously not focused on reusable, extensible object oriented code. There was one aircraft class, with some key attributes, but most of the code consisted of seperate globally accessible functions.  Changing this turned out to be major, why? I urge you to check out the demonstration below to find out.
+This was probably the most exciting improvement, which was on my [TODO](/scrambledev/2017/10/01/changelog.html) list for quite some time. The code was previously not focused on reusable, extensible object oriented code. There was one aircraft class, with some key attributes, but most of the code consisted of seperate globally accessible functions.  Improving this turned out to be major, why? I urge you to check out the demonstration below to find out.
 
 ## Feel the bass
 
@@ -56,4 +56,4 @@ Initial altitude 30.000ft, speed 350KTS. The flight leader is flying with you, s
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WTg3_xKTTW0?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
 
-Forget about my piloting skills for now, but as you can see, restructuring to object oriented code allows you to add more aircraft! Pretty neat  right?! The second aircraft is completely autonomous and has the autopilot engaged. However, it lacks A pilot (AI), so it cannot fly without an autopilot. I also decided to change the camera tracking logic to always track the player.
+Forget about my piloting skills for now, but as you can see, restructuring to object oriented code allows you to add more aircraft to the simulation! Pretty neat  right?! The second aircraft is completely autonomous and has the autopilot engaged. However, it lacks A pilot (AI), so it cannot fly without the autopilot engaged. I also decided to change the camera tracking logic to always track the player.
