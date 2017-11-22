@@ -44,3 +44,5 @@ Initial altitude 10.000ft, 450 KTAS. Autopilot master switch is enabled during s
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tRIJSTOKwGg?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
 
 Notice how the holding altitude is currently off by A couple of hundred feet. The autopilot still needs some fine tuning. Speed is controlled by adjusting throttle output, hence the only way to slow down is by pushing the throttle back.
+
+*Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*

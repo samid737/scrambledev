@@ -7,24 +7,90 @@ Detailed log starting 1 Oct.
 
 # TODO:
 
-- add ground friction force.
 - pitch limiter controller gain tuning.
 - auto pilot controller gain tuning, integral gain weak.
-- %reversed flight bug.
-- %landing rolling bug
 - %Speedbrake stuck after crash
-- %Display reset UR corner
-- %display not resetting R
-- IAS,TAS,EAS
-
-- Moving scenery (relative positioning/reference frame).
 - World building.
-
 - Weather, snow, rain, heat/desert.
 - Day night cycle.
 - performance optimization
 - refactor constants
+- alt shift F
 - List of assumptions
+
+# 21-11-2017
+
+## Features:
+
+- Camera target switching.
+- trim tabs, multiple control surfaces.
+
+## Bug fixes:
+
+- 
+
+# 20-11-2017
+
+## Features:
+
+- restructure code, engines, fix aerodynamics
+- autothrottle gain corrections.
+
+## Bug fixes:
+
+- 
+
+# 18-11-2017
+
+## Features:
+
+- add ground friction force.
+- restructure aircraft components oop.
+- JSON format aircraft data.
+
+## Bug fixes:
+
+- %landing rolling bug
+
+# 17-11-2017
+
+## Features:
+
+- add ground friction force.
+- restructure aircraft components oop.
+- JSON format aircraft data.
+
+## Bug fixes:
+
+- %landing rolling bug
+
+# 16-11-2017
+
+## Features:
+
+- JSON format aircraft data.
+
+## Bug fixes:
+
+- inertia incorrect
+
+# 15-11-2017
+
+- Moving scenery (relative positioning/reference frame).
+- TAS correction.
+
+## Features:
+
+- structural damage indicator
+- full power thrust sound
+- idle thrust sound.
+- recalibrate thrust/drag model, compressibility.
+
+## Bug fixes:
+
+- %reversed flight bug.
+- %Display reset UR corner
+- %display not resetting R
 
 # 12-11-2017
 
@@ -36,7 +102,6 @@ Detailed log starting 1 Oct.
 - recalibrate thrust/drag model, compressibility.
 
 ## Bug fixes:
-
 
 # 26-10-2017
 
