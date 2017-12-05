@@ -3,7 +3,7 @@ title: OOP , Camera target, HUD switch, Trimtabs,
 layout: post
 ---
 
-Ohhh yeah I cannot wait to publish this log. I must confess that the pace was A bit slower last week, but I made some extremely important internal modifications providing tremendous new possibilities. 
+I must confess that the pace was A bit slower last week, but I made some extremely important internal modifications providing tremendous new possibilities, if you 're in a TL;DR mood, I urge you to check out the videos!
 
 *All updates are found in the [changelog](/scrambledev/2017/10/01/changelog.html).*
 
@@ -24,6 +24,8 @@ It is now completely possible to add A wing surface of any size, shape (theoreti
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AYJOnxcYpjA" frameborder="0" gesture="media" allowfullscreen></iframe>
 
-This features kind of gives you A hint at what I'm up to next , since large airplanes use trim devices  to reduce the amount of input required by the pilot using the elevator. It would be A perfect test of the above advances.
+Note that I did not use any autopilot at all, the aircraft is level purely by trimming. This features kind of gives you A hint at what I'm up to next , since large airplanes need trim devices  to reduce the amount of input required by the pilot using the elevator. It would also make A perfect test of the above.  Everything is according to plans:
+
+![EVILLAUG](https://images1.memedroid.com/images/UPLOADED18/5084f26e8ccda.jpeg)
 
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*
