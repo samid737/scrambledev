@@ -2,9 +2,8 @@
 Scramble development log. for more details please visit the [dev log](https://samid737.github.io/scrambledev)
 
 Changelog:
-Detailed log starting 1 Oct.
 
-# TODO:
+## TODO:
 
 - pitch limiter  gain tuning.
 - auto pilot controller gain tuning, integral gain weak.
@@ -27,7 +26,7 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
+
 # 06-12-2017
 
 ## Features:
@@ -37,7 +36,7 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
+
 # 04-12-2017
 
 ## Features:
@@ -46,7 +45,7 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
+
 # 01-12-2017
 
 ## Features:
@@ -55,7 +54,7 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
+
 # 23-11-2017
 
 ## Features:
@@ -65,7 +64,7 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
+
 # 21-11-2017
 
 ## Features:
@@ -75,7 +74,6 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
 
 # 20-11-2017
 

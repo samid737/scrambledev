@@ -28,7 +28,7 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
+
 # 06-12-2017
 
 ## Features:
@@ -38,7 +38,7 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
+
 # 04-12-2017
 
 ## Features:
@@ -47,7 +47,7 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
+
 # 01-12-2017
 
 ## Features:
@@ -56,7 +56,7 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
+
 # 23-11-2017
 
 ## Features:
@@ -66,7 +66,7 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
+
 # 21-11-2017
 
 ## Features:
@@ -76,7 +76,6 @@ Detailed log starting 1 Oct.
 
 ## Bug fixes:
 
-- 
 
 # 20-11-2017
 
