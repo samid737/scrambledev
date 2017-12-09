@@ -2,28 +2,153 @@
 Scramble development log. for more details please visit the [dev log](https://samid737.github.io/scrambledev)
 
 Changelog:
+Detailed log starting 1 Oct.
 
 # TODO:
 
-- add ground friction force.
-- improve thrust/drag model, compressibility.
-- pitch limiter controller gain tuning.
+- pitch limiter  gain tuning.
 - auto pilot controller gain tuning, integral gain weak.
-- %reversed flight bug.
-- %landing rolling bug
 - %Speedbrake stuck after crash
-- %Display reset UR corner
-- %display not resetting R
-- IAS,TAS,EAS
-
-- Moving scenery (relative positioning/reference frame).
 - World building.
-
 - Weather, snow, rain, heat/desert.
 - Day night cycle.
 - performance optimization
 - refactor constants
+- alt shift F
 - List of assumptions
+
+# 08-12-2017
+
+## Features:
+
+- Phaser 3 port 80%.
+- Engine sound pitch.
+- LG locked indicator.
+
+## Bug fixes:
+
+- 
+# 06-12-2017
+
+## Features:
+
+- Phaser 3 port 70%
+- Camera logic improved.
+
+## Bug fixes:
+
+- 
+# 04-12-2017
+
+## Features:
+
+- Phaser 3 port 10%
+
+## Bug fixes:
+
+- 
+# 01-12-2017
+
+## Features:
+
+- Phaser 3 port 1%.
+
+## Bug fixes:
+
+- 
+# 23-11-2017
+
+## Features:
+
+- Pilot class
+- HUD class.
+
+## Bug fixes:
+
+- 
+# 21-11-2017
+
+## Features:
+
+- Camera target switching.
+- trim tabs, multiple control surfaces.
+
+## Bug fixes:
+
+- 
+
+# 20-11-2017
+
+## Features:
+
+- restructure code, engines
+- autothrottle gain corrections.
+
+## Bug fixes:
+
+- fix aerodynamics
+# 18-11-2017
+
+## Features:
+
+- add ground friction force.
+- restructure aircraft components oop.
+- JSON format aircraft data.
+
+## Bug fixes:
+
+- %landing rolling bug
+
+# 17-11-2017
+
+## Features:
+
+- add ground friction force.
+- restructure aircraft components oop.
+- JSON format aircraft data.
+
+## Bug fixes:
+
+- %landing rolling bug
+
+# 16-11-2017
+
+## Features:
+
+- JSON format aircraft data.
+
+## Bug fixes:
+
+- inertia incorrect
+
+# 15-11-2017
+
+- Moving scenery (relative positioning/reference frame).
+- TAS correction.
+
+## Features:
+
+- structural damage indicator
+- full power thrust sound
+- idle thrust sound.
+- recalibrate thrust/drag model, compressibility.
+
+## Bug fixes:
+
+- %reversed flight bug.
+- %Display reset UR corner
+- %display not resetting R
+
+# 12-11-2017
+
+## Features:
+
+- structural damage indicator
+- full power thrust sound
+- idle thrust sound.
+- recalibrate thrust/drag model, compressibility.
+
+## Bug fixes:
 
 # 26-10-2017
 
@@ -32,7 +157,6 @@ Changelog:
 - added cg debugging
 - compressibility effect added using compressible Bernoulli equation.
 - delta wing lift & drag model using Polhamus equation (low speed).
-- idle thrust sound.
 
 ## Bug fixes:
 
@@ -54,13 +178,11 @@ Changelog:
 ## Features:
 
 - pitch limiter.
-- engine sound effects
 - Autothrottle
 
 ## Bug fixes:
 
-- Mach 2 check.
-- Correct fuel burn
+- Correct fuel burn.
 - Stall behaviour, vstall.
 
 # 18-10-2017
@@ -127,7 +249,6 @@ Changelog:
 
 # 6-10-2017:
 
-
 ## Features:
 
 - added weight parameters, operating limit parameters.
@@ -148,4 +269,3 @@ Changelog:
 ## Bug fixes:
 
 - EOM, flight mechanics stable.
--
