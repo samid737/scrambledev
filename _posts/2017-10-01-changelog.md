@@ -7,7 +7,7 @@ Detailed log starting 1 Oct.
 
 # TODO:
 
-- pitch limiter controller gain tuning.
+- pitch limiter  gain tuning.
 - auto pilot controller gain tuning, integral gain weak.
 - %Speedbrake stuck after crash
 - World building.
@@ -18,6 +18,55 @@ Detailed log starting 1 Oct.
 - alt shift F
 - List of assumptions
 
+# 08-12-2017
+
+## Features:
+
+- Phaser 3 port 80%.
+- Engine sound pitch.
+- LG locked indicator.
+
+## Bug fixes:
+
+- 
+# 06-12-2017
+
+## Features:
+
+- Phaser 3 port 70%
+- Camera logic improved.
+
+## Bug fixes:
+
+- 
+# 04-12-2017
+
+## Features:
+
+- Phaser 3 port 10%
+
+## Bug fixes:
+
+- 
+# 01-12-2017
+
+## Features:
+
+- Phaser 3 port 1%.
+
+## Bug fixes:
+
+- 
+# 23-11-2017
+
+## Features:
+
+- Pilot class
+- HUD class.
+
+## Bug fixes:
+
+- 
 # 21-11-2017
 
 ## Features:
@@ -33,13 +82,12 @@ Detailed log starting 1 Oct.
 
 ## Features:
 
-- restructure code, engines, fix aerodynamics
+- restructure code, engines
 - autothrottle gain corrections.
 
 ## Bug fixes:
 
-- 
-
+- fix aerodynamics
 # 18-11-2017
 
 ## Features:
