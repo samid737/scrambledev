@@ -3,20 +3,91 @@ title: Changelog
 layout: post
 ---
 
-Detailed log starting 1 Oct.
+Changelog starting 1 Oct:
 
-# TODO:
+## TODO:
+
+- stall1 repeat bug.
+- configure JSON.
+- restructure namespace & JSON data to match systems. (engines, wings).
+
+- meteorology:
+- wind/turbulence.
+- percipitation: rain, snow, dust.
+- visibility.
 
 - pitch limiter  gain tuning.
 - auto pilot controller gain tuning, integral gain weak.
-- %Speedbrake stuck after crash
+- %Speedbrake stuck after crash.
 - World building.
-- Weather, snow, rain, heat/desert.
+- performance optimization.
+- refactor constants.
+- alt shift F.
+- List of assumptions.
+
+# 08-01-2017
+
+## Features:
+
+- Phaser b15 update.
+- Added Camera look.
+- Added high altitude Contrails.
+- closure/ Scramble namespace.
+
+## Bug fixes:
+
+- 
+
+# 07-01-2017
+
+## Features:
+
+- Added Camera layering, camera class
+
+## Bug fixes:
+
+- HUD ladder mask WEBGL.
+- World background not scrolling
+- shock wave repeat.
+
+# 06-01-2017
+
+## Features:
+
+- Added contrails, shock waves, clouds
+- Added FX class.
 - Day night cycle.
-- performance optimization
-- refactor constants
-- alt shift F
-- List of assumptions
+- Camera zoom buttons x,z
+- Player class.
+- Atmosphere class.
+
+## Bug fixes:
+
+-
+
+# 27-12-2017
+
+## Features:
+
+- RL agent formation flight training.
+
+## Bug fixes:
+
+-Autothrottle NaN fix.
+-Camera follow.
+
+
+# 20-12-2017
+
+## Features:
+
+- Phaser 3 port 85%.
+- RL agent.
+
+## Bug fixes:
+
+-Autothrottle NaN fix.
+-Camera follow.
 
 # 08-12-2017
 
