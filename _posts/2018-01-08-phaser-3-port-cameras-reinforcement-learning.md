@@ -7,7 +7,8 @@ First off: Happy new year folks!  The holidays kept me away from my PC, but not 
 One of my favorite features includes the new Camera system. I am still doing research in implementing AI for other aircraft and Reinforcement learning is one of the approaches I  considered and experimented with during the holidays. 
 Extremely fun, but difficult to harness.
 
-Also note that I've recently added A subscribe form  at the bottom of the log, so for those of you who wish to receive these dev logs regularly via e-mail, please don't forget to subscribe! 
+Also note that I've recently added A subscribe form  at the bottom of the log, so for those of you who wish to receive these dev logs regularly via e-mail, please don't forget to subscribe!  If you are interested in collaborating in the development, please feel free to contact me. I could definitely use an extra pair of hands to work on desired features.
+
 
 *All updates are found in the [changelog](/scrambledev/2017/10/01/changelog.html).*
 
@@ -51,6 +52,6 @@ You can also see the RL agent in action. The agent observes the environment (lea
 
 In my attempt, there where all sorts of problems I was faced with: Validating if it does learn and if it learns to converge to the right solution, the training time required,  the dimension of my state space and  the highly non-linear environment. In some test runs the agent was able to maintain perfect formation for about 10 seconds, but afterwards it would diverge. Yet I still believe with A bit more research it should be possible to get some sensible result, but darn you time....
 
-With these features added I can work on scenery, for example some enemy ground objects, Runways to take-off and land from, buildings and A background environment. Weapon systems, combat flight, mission building would follow afterwards. The UI will be considered in the final stages. The main challenge is automating the generation of the scenery/world. It might  be necessary to implement A mission/scenery editor to facilitate the above. If you are interested in collaborating in the development, please feel free to contact me. I could definitely use some extra hands to work on these features.
+With these features added I can work on scenery, for example some enemy ground objects, Runways to take-off and land from, buildings and A background environment. Weapon systems, combat flight, mission building would follow afterwards. The UI will be considered in the final stages. The main challenge is automating the generation of the scenery/world. It might  be necessary to implement A mission/scenery editor to facilitate the above. If you are interested in collaborating in the development, please feel free to contact me. I could definitely use an extra pair of hands to work on these features.
 
 *Scramble JS uses Phaser 3 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*
