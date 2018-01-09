@@ -3,27 +3,210 @@ Scramble development log. for more details please visit the [dev log](https://sa
 
 Changelog:
 
+## TODO:
 
-# TODO:
+- stall1 repeat bug.
+- configure JSON.
+- restructure namespace & JSON data to match systems. (engines, wings).
+
+- meteorology:
+- wind/turbulence.
+- percipitation: rain, snow, dust.
+- visibility.
+
+- pitch limiter  gain tuning.
+- auto pilot controller gain tuning, integral gain weak.
+- %Speedbrake stuck after crash.
+- World building.
+- performance optimization.
+- refactor constants.
+- alt shift F.
+- List of assumptions.
+
+# 08-01-2017
+
+## Features:
+
+- Phaser b15 update.
+- Added Camera look R key.
+- Added high altitude Contrails.
+- closure/ Scramble namespace.
+
+## Bug fixes:
+
+- 
+
+# 07-01-2017
+
+## Features:
+
+- Added Camera layering, camera class
+
+## Bug fixes:
+
+- HUD ladder mask WEBGL.
+- World background not scrolling
+- shock wave repeat.
+
+# 06-01-2017
+
+## Features:
+
+- Added contrails, shock waves, clouds
+- Added FX class.
+- Day night cycle.
+- Camera zoom buttons x,z
+- Player class.
+- Atmosphere class.
+
+## Bug fixes:
+
+-
+
+# 27-12-2017
+
+## Features:
+
+- RL agent formation flight training.
+
+## Bug fixes:
+
+-Autothrottle NaN fix.
+-Camera follow.
+
+
+# 20-12-2017
+
+## Features:
+
+- Phaser 3 port 85%.
+- RL agent.
+
+## Bug fixes:
+
+-Autothrottle NaN fix.
+-Camera follow.
+
+# 08-12-2017
+
+## Features:
+
+- Phaser 3 port 80%.
+- Engine sound pitch.
+- LG locked indicator.
+
+## Bug fixes:
+
+
+# 06-12-2017
+
+## Features:
+
+- Phaser 3 port 70%
+- Camera logic improved.
+
+## Bug fixes:
+
+
+# 04-12-2017
+
+## Features:
+
+- Phaser 3 port 10%
+
+## Bug fixes:
+
+
+# 01-12-2017
+
+## Features:
+
+- Phaser 3 port 1%.
+
+## Bug fixes:
+
+
+# 23-11-2017
+
+## Features:
+
+- Pilot class
+- HUD class.
+
+## Bug fixes:
+
+
+# 21-11-2017
+
+## Features:
+
+- Camera target switching.
+- trim tabs, multiple control surfaces.
+
+## Bug fixes:
+
+
+# 20-11-2017
+
+## Features:
+
+- restructure code, engines
+- autothrottle gain corrections.
+
+## Bug fixes:
+
+- fix aerodynamics
+# 18-11-2017
+
+## Features:
 
 - add ground friction force.
-- pitch limiter controller gain tuning.
-- auto pilot controller gain tuning, integral gain weak.
-- %reversed flight bug.
+- restructure aircraft components oop.
+- JSON format aircraft data.
+
+## Bug fixes:
+
 - %landing rolling bug
-- %Speedbrake stuck after crash
-- %Display reset UR corner
-- %display not resetting R
-- IAS,TAS,EAS
+
+# 17-11-2017
+
+## Features:
+
+- add ground friction force.
+- restructure aircraft components oop.
+- JSON format aircraft data.
+
+## Bug fixes:
+
+- %landing rolling bug
+
+# 16-11-2017
+
+## Features:
+
+- JSON format aircraft data.
+
+## Bug fixes:
+
+- inertia incorrect
+
+# 15-11-2017
 
 - Moving scenery (relative positioning/reference frame).
-- World building.
+- TAS correction.
 
-- Weather, snow, rain, heat/desert.
-- Day night cycle.
-- performance optimization
-- refactor constants
-- List of assumptions
+## Features:
+
+- structural damage indicator
+- full power thrust sound
+- idle thrust sound.
+- recalibrate thrust/drag model, compressibility.
+
+## Bug fixes:
+
+- %reversed flight bug.
+- %Display reset UR corner
+- %display not resetting R
 
 # 12-11-2017
 
