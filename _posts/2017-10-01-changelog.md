@@ -3,12 +3,11 @@ title: Changelog
 layout: post
 ---
 
-Changelog starting 1 Oct:
+Changelog:
 
 ## TODO:
 
 - stall1 repeat bug.
-- configure JSON.
 - restructure namespace & JSON data to match systems. (engines, wings).
 
 - meteorology:
@@ -16,14 +15,39 @@ Changelog starting 1 Oct:
 - percipitation: rain, snow, dust.
 - visibility.
 
-- pitch limiter  gain tuning.
-- auto pilot controller gain tuning, integral gain weak.
+- auto pilot altitude controller gain tuning, integral gain weak.
 - %Speedbrake stuck after crash.
 - World building.
 - performance optimization.
 - refactor constants.
 - alt shift F.
 - List of assumptions.
+
+
+# 28-02-2017
+
+## Features:
+
+- Bezier based auto-manouvre prototype.
+- Variable autopilot gains.
+
+# 27-02-2017
+
+## Features:
+
+- Phaser 3.1.2 update.
+- Added world element class.
+
+
+## Bug fixes:
+
+- Camera look zoomIn bug
+
+# 23-02-2017
+
+## Features:
+
+- Added vehicle sprites (tank, rocket launcher, scud launcher).
 
 # 08-01-2017
 
