@@ -12,5 +12,7 @@ The [MIG-21 FISHBED](https://en.wikipedia.org/wiki/Mikoyan-Gurevich_MiG-21) will
 ![Desert]({{ site.url }}/scrambledev/assets/images/PlayerDesert.png)
 
 You can notice the gaps near the belly, which is where the airbrakes are positioned once the spritesheet is assembled in Phaser.
+
+I will add A design log whenever an aircraft is added in the future.
  
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*
