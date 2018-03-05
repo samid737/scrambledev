@@ -15,7 +15,6 @@ Changelog:
 - percipitation: rain, snow, dust.
 - visibility.
 
-- auto pilot altitude controller gain tuning, integral gain weak.
 - %Speedbrake stuck after crash.
 - World building.
 - performance optimization.
@@ -23,15 +22,24 @@ Changelog:
 - alt shift F.
 - List of assumptions.
 
-
-# 28-02-2017
+# 04-03-2018
 
 ## Features:
 
-- Bezier based auto-manouvre prototype.
+- Auto flight path generation.
+
+## Bug fixes:
+
+- auto pilot altitude controller gain tuning, integral gain weak.
+
+# 28-02-2018
+
+## Features:
+
+- Bezier based auto-manoueuvre prototype.
 - Variable autopilot gains.
 
-# 27-02-2017
+# 27-02-2018
 
 ## Features:
 
@@ -43,13 +51,13 @@ Changelog:
 
 - Camera look zoomIn bug
 
-# 23-02-2017
+# 23-02-2018
 
 ## Features:
 
 - Added vehicle sprites (tank, rocket launcher, scud launcher).
 
-# 08-01-2017
+# 08-01-2018
 
 ## Features:
 
