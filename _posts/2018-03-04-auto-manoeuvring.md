@@ -3,13 +3,13 @@ title: Auto manoeuvring
 layout: post
 ---
 
-This log will be brief in demonstration, but tightly packed with explanation,  [fasten your seatbelt](https://www.youtube.com/watch?v=Y9WDcPwAQ0g)!
+This log will be brief in demonstration, tightly packed with explanation,  so [fasten your seatbelts](https://www.youtube.com/watch?v=Y9WDcPwAQ0g)!
 
 *All updates are found in the [changelog](/scrambledev/2017/10/01/changelog.html).*
 
 # Auto manoeuvring
 
-Let's start with the demonstration first:
+Let's start with the demonstration first in order to figure out how it works:
 
 ## Mission
 
@@ -23,7 +23,7 @@ Initial altitude 7.000ft, speed 600KTS.  The Auto manoeuvre system is enabled. Y
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A46othGUIkM?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
 
-The aircraft is in An (almost) complete autonomous flight! Notice the green paths showing up incidentally (actually me clicking the generateFlightPath button) during flight and notice how the aircraft is trying to follow these paths. 
+Note that the aircraft is almost in complete autonomous flight! Also notice the green paths showing up incidentally (actually just me clicking the generateFlightPath button) during flight and notice how the aircraft is trying to follow these paths. 
 
 ## Path generation
 
@@ -32,6 +32,8 @@ Phaser 3 is armed with some  nice tools  to implement [path](https://labs.phaser
 By forcing the aircraft to follow this path, we can facilitate auto flight.
 
 ## Utilizing autopilot
+
+The [previous log](/scrambledev/2018/01/08/phaser-3-port-cameras-reinforcement-learning.html) demonstrated the attempt of implementing AI using reinforcement learning, which was super interesting , but experimental. I am still convinced that this approach can provide results, but I had to proceed with an alternative and decided not to reside to this method for now, but instead further utilize the existing autopilot control system. 
 
 The autopilot control system currently implements an all purpose [PID controller](https://www.npmjs.com/package/node-pid-controller), so I put my focus on utilizing the PID. 
 
@@ -57,8 +59,6 @@ Pictorially and going back to paths:
 This shows that the distance between any point normal to the aircraft that intersects A path determines the error (notice yellow normal line in video).  The intersection point can be retrieved via [Bezier - Line intersection](https://pomax.github.io/bezierjs/) test.
 
 ## What's next
-
-The [previous log](/scrambledev/2018/01/08/phaser-3-port-cameras-reinforcement-learning.html) demonstrated the attempt of implementing AI using reinforcement learning, which was super interesting , but experimental. I am still convinced that this approach can provide results, but I had to proceed with an alternative and decided not to reside to this method for now, but instead further utilize the existing autopilot control system. 
 
 The final step is to add some sort of descision making logic to the auto manoeuvring system.  Completing this allows me to focus on less aircraft related stuff. I have already been working on some vehicle designs for ground objects(targets), the spritesheets still have to be assembled. A Vehicle class is already prepared and will need further implementation once vehicles will be added to the simulation.
 
