@@ -5,13 +5,13 @@ layout: post
 
 *Please not that these features where implemented in the early stage, prior to  logging the progress.*
 
-In [Modeling part 1](/scrambledev/2017/03/01/progress-part-1-flight-mechanics-physics-system-world-setup.html), the aircraft is properly configured so that it exists in Phaser, armed with A physics body. The flight physics can be implemented at this stage.
+In [Modeling part 1](/scrambledev/2017/03/01/progress-part-1-flight-mechanics-physics-system-world-setup.html), the aircraft is properly configured so that it exists in Phaser, armed with a physics body. The flight physics can be implemented at this stage.
 
-Normally when working on A flight simulator, you consider motion in three dimensions. There are quite alot of resources and even [example projects](https://www.google.nl/search?q=flight+simulator+github) available that implement flight in three dimensions. However, these rely on A particular set of assumptions. The problem in my case is that my assumptions differ from the reference material. The good news however lies in the number two of 2D, I can bypass an entire dimension...
+Normally, one would consider motion in three dimensions. There are quite alot of resources and even [example projects](https://www.google.nl/search?q=flight+simulator+github) available that implement flight in three dimensions. However, these rely on a particular set of assumptions. The problem in our case is that the assumptions differ from the reference material. The good news however lies in the number two of 2D, we can bypass an entire dimension...
 
 ## Equations of motion (EOM) analysis
 
-To upgrade the current model, the aircraft is in need of some equations of motion.There are A view fundemental equations I applied to determine the motion of the aircraft and the main source  is the [Flight and Orbital Mechanics](https://ocw.tudelft.nl/courses/flight-orbital-mechanics/) course I took, given  by Dr. ir. M. Voskuijl. Basically this course deals with the mechanics involved during every phase of flight (take-off, climb, cruise, descent, landing) and the nice part is that complete derivations are  included for 2D longitudinal flight!
+To upgrade the current model, the aircraft is in need of some equations of motion. There are some fundemental equations that have been applied to determine the motion of the aircraft and the main source  is the [Flight and Orbital Mechanics](https://ocw.tudelft.nl/courses/flight-orbital-mechanics/) course , given  by Dr. ir. M. Voskuijl. Basically this course deals with the mechanics involved during every phase of flight (take-off, climb, cruise, descent, landing) and the nice part is that complete derivations are  included for 2D longitudinal flight!
 
 ### Translation
 
@@ -36,7 +36,7 @@ The weight is initially given and will decrease during  flight (fuel burn).
 
 #### Thrust
 
-The thrust is also A variable during flight, but the maximum static thrust an engine can provide  is also A known value.
+The thrust is also a variable during flight, but the maximum static thrust an engine can provide  is also a known value.
 
 #### Lift
 
@@ -128,11 +128,11 @@ Notice the acceleration terms $$a_x$$ and $$a_y$$ are immediately found if all f
 
 The aircraft takes off carrying certain weight. There are three weights that matter for now:
 
-- Fuel: you start with some fuel on board, fly around in two, three circles and end with some reserve fuel left (according to strict regulations, but lets not involve them).
+- Fuel: you start with some fuel on board, fly around in two, three circles and end with some reserve fuel left (according to strict requirements, but lets not involve them).
 - Payload: cargo, weapons, passengers, etc.
 - Empty weight: the weight of the aircraft without payload or fuel.
 
-The numbers are pretty easy to find for any aircraft. These are assigned as properties of the aircraft, and you end up with something like this:
+These numbers are pretty easy to find for any aircraft. These will be considered as properties of the aircraft, and you end up with something like:
 
 ```
 //inside aircraft class

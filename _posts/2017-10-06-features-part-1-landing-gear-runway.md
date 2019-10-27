@@ -18,7 +18,7 @@ A landing gear is added to the spritesheet and animated in Phaser using [tweens]
 ![RWY]({{ site.url }}/scrambledev/assets/images/RWY.png).
 
 A second sprite is finally added to the world. A runway is added using [tileSprites](https://phaser.io/examples/v2/category/tile-sprites) so that the length of the runway can be varied. The runway is stretched to the entire game width for now. There is no scenery involved yet, its just one infinitely stretching runway, perfect for testing purposes.
-This is the second sprite with A physics body attached to it. The sprite position is fixed to the bottom of the game world.
+This is the second sprite with a physics body attached to it. The sprite position is fixed to the bottom of the game world.
 
 ## Take-off/landing
 
@@ -55,7 +55,7 @@ The Landing gear and Runway are demonstrated.
 
 ### Briefing
 
-The mission will start at zero altitude, standard day, mean sea level. Take-off then immediately climb out A bit,  approach the runway and land. The manoeuvre:
+The mission will start at zero altitude, standard day, mean sea level. Take-off then immediately climb out a bit,  approach the runway and land. The manoeuvre:
 
 ![m00]({{ site.url }}/scrambledev/assets/images/manouvres/00.png)
 

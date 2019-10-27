@@ -31,9 +31,9 @@ Flight Data included:
 ##  Secondary flight controls.
 
 ### High lift devices
-I played around and tried to take-off and land and I was quickly able to confirm the difficulties that arise with low-speed flight for high speed aircraft (especially with delta wings). This also proved the flight model has a pretty high level of accuracy. The angle of attack can increase to A critical angle when lowering speed at A steady (low) altitude, resulting in stalled flight. Without high lift devices, there is no mechanism to deal with such critical angle of attack. The player must be able to Take off and land, so it was necessary to consider high lift devices.  
+I played around and tried to take-off and land and I was quickly able to confirm the difficulties that arise with low-speed flight for high speed aircraft (especially with delta wings). This also proved the flight model has a pretty high level of accuracy. The angle of attack can increase to a critical angle when lowering speed at A steady (low) altitude, resulting in stalled flight. Without high lift devices, there is no mechanism to deal with such critical angle of attack. The player must be able to Take off and land, so it was necessary to consider high lift devices.  
 
-Flaps will be the available as A high lift device. Flaps will influence the lift coefficient by increasing it at the same angle of attack .  This will allow the user deal with low-speeds well within angle of attack margins. [This](https://ieeenitk.org/blog/High-Lift-devices/) article explains it briefly. 
+Flaps will be the available as a high lift device. Flaps will influence the lift coefficient by increasing it at the same angle of attack .  This will allow the user deal with low-speeds well within angle of attack margins. [This](https://ieeenitk.org/blog/High-Lift-devices/) article explains it briefly. 
 
 The aircraft is assumed to have two flap settings, with two coefficients that will be added to the lift coefficient whenever flaps are deployed. 
 
@@ -77,7 +77,7 @@ The initial altitude 10.000ft, speed 450KTS TAS, accelerate and climb vertically
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o-CQACvYAVY?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
 
-Notice how full stabilator deflection causes the screen to flash red. This is A structural damage alert. A Stall warning will make the screen shake.A damage model is yet to be implemented. The stabilator is normally extremely sensitive to input, the deflection limits were reduced for the purpose of this demonstration.
+Notice how full stabilator deflection causes the screen to flash red. This is A structural damage alert. A Stall warning will make the screen shake. A damage model is yet to be implemented. The stabilator is normally extremely sensitive to input, the deflection limits were reduced for the purpose of this demonstration.
 The aircraft can be flipped in an instant by pressing the D key, to simulate 180 degree [aileron roll](http://www.fokkerfour.nl/aktiviteiten/aerobatics/images/roll.gif).Pilot blackout and redout is simulated aswell (No G-LOC yet though).
 
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*

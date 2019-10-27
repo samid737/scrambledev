@@ -5,23 +5,23 @@ layout: post
 
 *Please not that these features where implemented in the early stage, prior to  logging the progress.*
 
-In [Modeling  part 2](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html), equations of motions are added to the aircraft model. In the current state, the aircraft is modelled as A giant (and heavy) symmetrical flying wing. The [B2-Spirit](https://qph.ec.quoracdn.net/main-qimg-fc219e6b7e82d997d715af545eecdbc9-c) is designed in A similar way and it is aerodynamically unstable, constant relying on adjustments from flight control computers. Most aircraft need an extra mechanism for longitudinal stability. Adding A [horizontal stabilizer/tail](https://www.grc.nasa.gov/www/k-12/airplane/Images/elv.gif) is A conventional way to add longitudinal stability and control.
+In [Modeling  part 2](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html), equations of motions are added to the aircraft model. In the current state, the aircraft is modelled as A giant (and heavy) symmetrical flying wing. The [B2-Spirit](https://qph.ec.quoracdn.net/main-qimg-fc219e6b7e82d997d715af545eecdbc9-c) is designed in A similar way and it is aerodynamically unstable, constant relying on adjustments from flight control computers. Most aircraft need an extra mechanism for longitudinal stability. Adding A [horizontal stabilizer/tail](https://www.grc.nasa.gov/www/k-12/airplane/Images/elv.gif) is a conventional way to add longitudinal stability and control.
 
 ## Longitudinal stability
 
-The stability of some system refers to the tendency to return to the original state after being disturbed by some external input, much like shooting A [marble](https://www.intechopen.com/source/html/22198/media/image5.jpg).
-In longitudinal flight, the disturbance is A pitch up or pitch down input.
-[Static stability ](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Aircraft_static_longitudinal_stability.svg/800px-Aircraft_static_longitudinal_stability.svg.png)refers to the immediate response of the aircraft, i.e, you bump your hand against the stick, stick goes down, what is the response very shortly afterwards. [Dynamic stability](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Aircraft_dynamic_longitudinal_stability.svg/1920px-Aircraft_dynamic_longitudinal_stability.svg.png) considers the motion over A longer period of time.
+The stability of some system refers to the tendency to return to the original state after being disturbed by some external input, much like shooting a [marble](https://www.intechopen.com/source/html/22198/media/image5.jpg).
+In longitudinal flight, the disturbance is a pitch up or pitch down input.
+[Static stability ](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Aircraft_static_longitudinal_stability.svg/800px-Aircraft_static_longitudinal_stability.svg.png)refers to the immediate response of the aircraft, i.e, you bump your hand against the stick, stick goes down, what is the response very shortly afterwards. [Dynamic stability](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Aircraft_dynamic_longitudinal_stability.svg/1920px-Aircraft_dynamic_longitudinal_stability.svg.png) considers the motion over a longer period of time.
 
-For A statically stable aircraft, if it is dynamically unstable, then it will keep oscillating about the equilibrium state, but the amplitude increases over time and so it diverges to some extreme. If it is dynamically netural, then it will oscillate, but the amplitude remains the same and it will continue oscillating indefinitely.  If it is dynamically stable, it will oscillate, but the amplitude decreases over time (dampening) and it will subside to the original state. The amount of damping varies with aircraft design and the aircraft may be underdamped, overdamped and even critically damped.
+For a statically stable aircraft, if it is dynamically unstable, then it will keep oscillating about the equilibrium state, but the amplitude increases over time and so it diverges to some extreme. If it is dynamically netural, then it will oscillate, but the amplitude remains the same and it will continue oscillating indefinitely.  If it is dynamically stable, it will oscillate, but the amplitude decreases over time (dampening) and it will subside to the original state. The amount of damping varies with aircraft design and the aircraft may be underdamped, overdamped and even critically damped.
 
 ![DYNAMIC](http://www.splung.com/kinematics/images/damped_oscillations/damped_oscillations.gif)
 
-If the aircraft is currently launched horizontally forward at an altitude of 20.000ft, it first pitches down slightly, then tend to pitch up (negative angle of attack), countered by A pitch-down and so on until this oscillation dies out. the trajectory is parabolic while this is happening. It tends to restore to the original state, zero angle of attack, but the trajectory is still downward.  There will never be any moment equilibrium in the current state. The model is in need of some mechanism that counters the torque exerted by the main wing  to allow steady flight.
+If the aircraft is currently launched horizontally forward at an altitude of 20.000ft, it first pitches down slightly, then tend to pitch up (negative angle of attack), countered by a pitch-down and so on until this oscillation dies out. the trajectory is parabolic while this is happening. It tends to restore to the original state, zero angle of attack, but the trajectory is still downward.  There will never be any moment equilibrium in the current state. The model is in need of some mechanism that counters the torque exerted by the main wing  to allow steady flight.
 
 ### Horizontal stabilizer (HSTAB)
 
-If the result from [part 2](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html) is A flying wing, then applying the exact same equations using smaller dimensions will lead to A smaller flying wing. With the exact same procedure, A HSTAB is added to the current model and its location is behind the CG.
+If the result from [part 2](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html) is A flying wing, then applying the exact same equations using smaller dimensions will lead to A smaller flying wing. With the exact same procedure, a HSTAB is added to the current model and its location is behind the CG.
 
 ### Analysis
 
@@ -47,7 +47,7 @@ Control is added using flight control surfaces and in the longitudinal case this
 
 ### Stabilitor
 
-The stabilator is A fully moving tail/HSTAB. Fighter aircraft mainly have [stabilators](http://www.b-domke.de/AviationImages/Viper/Images/3715.jpg). The simplest way out for now is to consider stabilators. 
+The stabilator is a fully moving tail/HSTAB. Fighter aircraft mainly have [stabilators](http://www.b-domke.de/AviationImages/Viper/Images/3715.jpg). The simplest way out for now is to consider stabilators. 
 
 ### Analysis
 
@@ -71,7 +71,7 @@ The stabilator of the MIG-21 is modeled and the airfoil is considered thin, symm
 
 ## Result
 
-It was A pretty tedious,maybe  A bit aggrevating task to get the model to work . A big lesson learned is to keep track of sign conventions, because sign errors quickly accumulate and debugging will be like finding A needle in the haystack. The result is awesome: 
+It was a pretty tedious,maybe  A bit aggrevating task to get the model to work . A big lesson learned is to keep track of sign conventions, because sign errors quickly accumulate and debugging will be like finding a needle in the haystack. The result is awesome: 
 
 TODO.
 
@@ -79,7 +79,7 @@ The stabilator is limited to 15 degree positive, 7 degree negative deflection:
 
 ![stabilator](http://g.recordit.co/ntLlUQ1Nh9.gif).
 
-The aircraft is extremely sensitive to input, since there is nothing that limits deflection rate. As A result, the aircraft can be exposed to destructive G loads (>22g's) at high speed. A pitch limiter needs to be implemented to safeguard the aircraft (who cares about the pilot right?).
+The aircraft is extremely sensitive to input, since there is nothing that limits deflection rate. As a result, the aircraft can be exposed to destructive G loads (>22g's) at high speed. A pitch limiter needs to be implemented to safeguard the aircraft (who cares about the pilot right?).
 
 Pitching moments, lift forces and arms are displayed during simulation. [Dat.gui](https://github.com/dataarts/dat.gui) is used to inspect and change parameters during simulation. 
 
@@ -90,4 +90,4 @@ At this point, controlled flight is achieved.
 ![succes](http://weknowmemes.com/generator/uploads/generated/g1406897962820158167.jpg)
 
 
-Some possible improvements in flight control: trimming, damping, adding flaps, speedbrakes. The atmosphere is currently assumed to be A linear model, which is not true in reality. More about this in [Modeling  part 4: Modeling the atmosphere](/scrambledev/2017/06/01/development-part-3-modeling-atmosphere).
+Some possible improvements in flight control: trimming, damping, adding flaps, speedbrakes. The atmosphere is currently assumed to be a linear model, which is not true in reality. More about this in [Modeling  part 4: Modeling the atmosphere](/scrambledev/2017/06/01/development-part-3-modeling-atmosphere).

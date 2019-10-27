@@ -3,7 +3,7 @@ title: Autopilot controller, pitch limiter
 layout: post
 ---
 
-Last week  was mostly spent on writing about the  early stage developments (starting  [here](/scrambledev/2017/03/01/progress-part-1-flight-mechanics-physics-system-world-setup.html)) and it serves as A recap on everything I've done so far. This is why there is A noticeable gap in the post timeline.
+Last week  was mostly spent on writing about the  early stage developments (starting  [here](/scrambledev/2017/03/01/progress-part-1-flight-mechanics-physics-system-world-setup.html)) and it serves as a recap on everything I've done so far. This is why there is a noticeable gap in the post timeline.
 
 Adding an autopilot was not on the list of features at first.  While analysing and endlessly recalibrating the aircraft its stability (read more in [Modeling part 3: Stability and Control](/scrambledev/2017/05/01/development-part-4-modeling-thrust-basic-control.html)) I figured that having an autopilot would help out substantially. In [part 3](/scrambledev/2017/05/01/development-part-4-modeling-thrust-basic-control.html) I also mentioned the control output to be dangerously sensitive, providing immediate response and ignoring the airframe and pilot limits. This makes it harder to properly calibrate the aircraft. The pitch limiter solves this problem.
 
@@ -11,18 +11,18 @@ Adding an autopilot was not on the list of features at first.  While analysing a
 
 ## Autopilot control system
 
-The Autopilot currently supports two modes:
+The autopilot currently supports two modes:
 
 - speed hold/autothrottle
 - altitude hold
 
-For both cases, A [PID controller](https://www.npmjs.com/package/node-pid-controller) is implemented. [Here](http://www.flightgear.org/Docs/XMLAutopilot/node2.html) is a nice read on how A PID is used in autpilot systems, it definitely helped me out.
+For both cases, a [PID controller](https://www.npmjs.com/package/node-pid-controller) is implemented. [Here](http://www.flightgear.org/Docs/XMLAutopilot/node2.html) is a nice read on how A PID is used in autpilot systems, it definitely helped me out.
 
-Just like most autopilots, there is A master hold switch and individiual hold switch. The GUI is not yet implemented, everything is in [dat.gui](http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage). The autopilot altitude hold still needs to be fine tuned by ajdusting the gains, but it will eventually hold at near reference altitude (there is some total error).
+Just like most autopilots, there is a master hold switch and individiual hold switch. The GUI is not yet implemented, everything is in [dat.gui](http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage). The autopilot altitude hold still needs to be fine tuned by ajdusting the gains, but it will eventually hold at near reference altitude (there is some total error).
 
 ## Pitch limiter
 
-The pitch limiter is an inverse proportional controller. It reduces the actual elevator deflection with increase in load factor and uses the ultimate design load factor  as A reference value. 
+The pitch limiter is an inverse proportional controller. It reduces the actual elevator deflection with increase in load factor and uses the ultimate design load factor  as a reference value. 
 
 ```
 var x = Phaser.Math.clamp(Math.abs(myAircraft.n / myAircraft.nmax), 0.1, 1);
@@ -43,6 +43,6 @@ Initial altitude 10.000ft, 450 KTAS. Autopilot master switch is enabled during s
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tRIJSTOKwGg?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
 
-Notice how the holding altitude is currently off by A couple of hundred feet. The autopilot still needs some fine tuning. Speed is controlled by adjusting throttle output, hence the only way to slow down is by pushing the throttle back.
+Notice how the holding altitude is currently off by a couple of hundred feet. The autopilot still needs some fine tuning. Speed is controlled by adjusting throttle output, hence the only way to slow down is by pushing the throttle back.
 
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*

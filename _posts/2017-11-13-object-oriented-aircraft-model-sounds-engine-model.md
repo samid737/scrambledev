@@ -9,12 +9,12 @@ I am super excited with the outcome of last week. Although the features are less
 
 ## Supersonics
 
-The biggest problem until now was the unrealistic altitude capability. The MIG-21 has A ceiling at around 60.000ft, but the aircraft can easily reach 90.000ft right now.
+The biggest problem until now was the unrealistic altitude capability. The MIG-21 has a ceiling at around 60.000ft, but the aircraft can easily reach 90.000ft right now.
 The engine model, but also some assumptions  are to blaim for this. The details are found in [part 2](/scrambledev/2017/04/01/development-part-xx-eom-basic-atmosphere.html).
 
 ### Engine model revisited
 
-About 80% of last weeks development time was spent on remodelling thrust. The first improvement incorperates speed into the current engine model.  With higher speeds , the engine mass flow increases, which could benefit the [thrust](https://www.grc.nasa.gov/www/k-12/airplane/thrsteq.html), but the intake vs exhaust velocity delta decreases.  The thrust model now incorperates the Mach number as A parameter for A more accurate engine model. 
+About 80% of last weeks development time was spent on remodelling thrust. The first improvement incorperates speed into the current engine model.  With higher speeds , the engine mass flow increases, which could benefit the [thrust](https://www.grc.nasa.gov/www/k-12/airplane/thrsteq.html), but the intake vs exhaust velocity delta decreases.  The thrust model now incorperates the Mach number as a parameter for A more accurate engine model. 
 
 The majority of time though was spent on researching A more sophisticated turbojet model using [this](https://web.stanford.edu/~cantwell/AA283_Course_Material/AA283_Course_Notes/AA283_Aircraft_and_Rocket_Propulsion_Ch_04_BJ_Cantwell.pdf) source as A reference. The model does seem to work, but more research is needed to succesfully incorporate it. I had to draw the line with the current model, otherwise I would spend too much time on R&D. If it works, it works. 
 
@@ -40,7 +40,7 @@ This was probably the most exciting improvement, which was on my [TODO](/scrambl
 
 ## Feel the bass
 
-Just to fool around A bit, I made some custom aircraft sound effects. Different engine sounds are added and their volumes are adjusted to match the engine thrust setting. No pitch adjustments unfortunately....not yet at least. Idle sounds, full power, afterburner thrust are added. A nice [soundtrack](https://www.youtube.com/watch?v=L9epcjTej7E) is also added to the video below just to spice things up (THIS WILL NOT ADDED TO THE GAME). A stall warning beep sound is also added.
+Just to fool around a bit, I made some custom aircraft sound effects. Different engine sounds are added and their volumes are adjusted to match the engine thrust setting. No pitch adjustments unfortunately....not yet at least. Idle sounds, full power, afterburner thrust are added. A nice [soundtrack](https://www.youtube.com/watch?v=L9epcjTej7E) is also added to the video below just to spice things up (THIS WILL NOT ADDED TO THE GAME). A stall warning beep sound is also added.
 
 ## Mission
 
@@ -56,6 +56,6 @@ Initial altitude 30.000ft, speed 350KTS. The flight leader is flying with you, s
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WTg3_xKTTW0?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
 
-Forget about my piloting skills for now, but as you can see, restructuring to object oriented code allows you to add more aircraft to the simulation! Pretty neat  right?! The second aircraft is completely autonomous and has the autopilot engaged. However, it lacks A pilot (AI), so it cannot fly without the autopilot engaged. I also decided to change the camera tracking logic to always track the player.
+Forget about my piloting skills for now, but as you can see, restructuring to object oriented code allows you to add more aircraft to the simulation! Pretty neat  right?! The second aircraft is completely autonomous and has the autopilot engaged. However, it lacks a pilot (AI), so it cannot fly without the autopilot engaged. I also decided to change the camera tracking logic to always track the player.
 
 *Scramble JS uses Phaser 2 as game engine. Fore more info, visit [Phaser.io](http://www.phaser.io).*

@@ -37,7 +37,7 @@ The [previous log](/scrambledev/2018/01/08/phaser-3-port-cameras-reinforcement-l
 
 The autopilot control system currently implements an all purpose [PID controller](https://www.npmjs.com/package/node-pid-controller), so I put my focus on utilizing the PID. 
 
-The altitude controller keeps the aircraft steady at some height and controls the $$\boldsymbol{y}$$ of the aircraft. If you rethink this in terms of Bezier curves, then the altitude controller forces the aircraft follow a horizontal line, which is A bezier curve with control points:
+The altitude controller keeps the aircraft steady at some height and controls the $$\boldsymbol{y}$$ of the aircraft. If you rethink this in terms of Bezier curves, then the altitude controller forces the aircraft follow a horizontal line, which is Aa bezier curve with control points:
 
 $$\boldsymbol{P_0 = (x_0, y_0), P_1 = (x_1, y_0), P_2 = (x_1, y_0),P_3= (x_3, y_0)}$$
 
@@ -47,7 +47,7 @@ The altitude controller , controls the error:
 
 $$\boldsymbol{e_{alt} = y_{reference} - y_{actual} } $$
 
-By adjusting to A controller that not only considers $$\boldsymbol{y}$$, but also $$\boldsymbol{x}$$ as input, we can control the aircraft based upon distance checking:
+By adjusting to a controller that not only considers $$\boldsymbol{y}$$, but also $$\boldsymbol{x}$$ as input, we can control the aircraft based upon distance checking:
 
 
 $$\boldsymbol{e_{automan} = \sqrt{(y_{reference}- y_{actual} )^2 +(x_{reference}- x_{actual} )^2} }$$
@@ -56,7 +56,7 @@ Pictorially and going back to paths:
 
 ![BZR]({{ site.url }}/scrambledev/assets/images/BZR.png)
 
-This shows that the distance between any point normal to the aircraft that intersects A path determines the error (notice yellow normal line in video).  The intersection point can be retrieved via [Bezier - Line intersection](https://pomax.github.io/bezierjs/) test.
+This shows that the distance between any point normal to the aircraft that intersects a path determines the error (notice yellow normal line in video).  The intersection point can be retrieved via [Bezier - Line intersection](https://pomax.github.io/bezierjs/) test.
 
 ## What's next
 
